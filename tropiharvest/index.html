@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TropiHarvest Farms | Fresh from Guyana</title>
+  <meta name="description"
+    content="TropiHarvest Farms is Guyana's premier export-ready supplier of tropical fruits and vegetables." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/png" href="./logo.png" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: '#0B8A5D',
+              secondary: '#F69F23',
+              dark: '#064034',
+              light: '#E8F5F0'
+            }
+          },
+          fontFamily: {
+            display: ['Poppins', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 15px 35px rgba(14, 85, 59, 0.18)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f9f7;
+      color: #052f1d;
+    }
+
+    .gradient-overlay {
+      background: linear-gradient(120deg, rgba(11, 138, 93, 0.88), rgba(246, 159, 35, 0.82));
+    }
+
+    .hero-image {
+      background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+
+<body class="bg-brand-light/40">
+  <header class="hero-image relative">
+    <span class="gradient-overlay absolute inset-0 opacity-95"></span>
+    <div class="relative">
+      <nav class="bg-transparent">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 text-white">
+          <div class="flex items-center space-x-3">
+            <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=200&q=80"
+              alt="TropiHarvest Farms logo placeholder" class="h-12 w-12 rounded-full object-cover shadow-lg" />
+            <div>
+              <p class="text-lg font-semibold tracking-wide">TropiHarvest Farms</p>
+              <p class="text-sm uppercase tracking-[0.32em] text-white/80">Guyana</p>
+            </div>
+          </div>
+          <div class="hidden items-center space-x-8 text-sm font-medium md:flex">
+            <a href="#about" class="hover:text-brand-secondary">About</a>
+            <a href="#products" class="hover:text-brand-secondary">Products</a>
+            <a href="#buyer-portal" class="hover:text-brand-secondary">Buyer Portal</a>
+            <a href="#news" class="hover:text-brand-secondary">News</a>
+            <a href="#contact" class="hover:text-brand-secondary">Contact</a>
+          </div>
+          <a href="#buyer-portal"
+            class="rounded-full bg-brand-secondary px-5 py-2 text-sm font-semibold text-brand.dark shadow-lg transition hover:bg-brand-secondary hover:text-white">Request
+            a Quote</a>
+        </div>
+      </nav>
+      <section
+        class="mx-auto flex max-w-6xl flex-col items-start gap-10 px-6 py-24 text-white md:flex-row md:items-center md:py-32">
+        <div class="max-w-xl space-y-6">
+          <span
+            class="inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-medium uppercase tracking-wide">Export
+            Ready</span>
+          <h1 class="font-display text-4xl font-bold leading-tight md:text-5xl">Fresh from Guyana's soil to your shelf.
+          </h1>
+          <p class="text-lg text-white/90">TropiHarvest Farms is Guyana's premier grower of papaya, pineapple, peppers,
+            and plantain. From sustainable cultivation to temperature-controlled logistics, we deliver premium produce
+            to supermarkets and distribution centers across CARICOM and North America.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#products"
+              class="rounded-full bg-brand-secondary px-6 py-3 font-semibold text-brand-dark transition hover:bg-white hover:text-brand-primary">Explore
+              Produce</a>
+            <a href="#drone"
+              class="rounded-full border border-white px-6 py-3 font-semibold text-white transition hover:bg-white hover:text-brand-dark">Watch
+              Farm Tour</a>
+          </div>
+        </div>
+        <div class="w-full max-w-md space-y-6 rounded-2xl bg-white/10 p-8 backdrop-blur">
+          <p class="text-sm uppercase tracking-[0.24em] text-white/60">By the numbers</p>
+          <div class="grid grid-cols-2 gap-6 text-center">
+            <div class="rounded-xl bg-white/10 p-4">
+              <p class="text-4xl font-bold">1,200+</p>
+              <p class="mt-2 text-sm text-white/70">Acres under cultivation</p>
+            </div>
+            <div class="rounded-xl bg-white/10 p-4">
+              <p class="text-4xl font-bold">18</p>
+              <p class="mt-2 text-sm text-white/70">Export markets served</p>
+            </div>
+            <div class="rounded-xl bg-white/10 p-4">
+              <p class="text-4xl font-bold">48hr</p>
+              <p class="mt-2 text-sm text-white/70">Harvest-to-flight turnaround</p>
+            </div>
+            <div class="rounded-xl bg-white/10 p-4">
+              <p class="text-4xl font-bold">3</p>
+              <p class="mt-2 text-sm text-white/70">Temperature zones onsite</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <main class="bg-white">
+    <section id="about" class="mx-auto max-w-6xl space-y-16 px-6 py-20">
+      <div class="grid gap-12 md:grid-cols-[1.7fr_1fr]">
+        <div class="space-y-6">
+          <h2 class="font-display text-3xl font-semibold text-brand-dark">Rooted in Guyana, trusted worldwide</h2>
+          <p class="text-brand-dark/80">Founded in 1998 on the rich alluvial soils of the Mahaica-Berbice region,
+            TropiHarvest Farms has cultivated a reputation for reliability, flavor, and export readiness. Our vertically
+            integrated operations span over 1,200 acres with satellite farms strategically positioned for year-round
+            supply continuity.</p>
+          <div class="grid gap-6 md:grid-cols-2">
+            <div class="rounded-2xl border border-brand-primary/10 bg-brand-light/60 p-6 shadow-soft">
+              <h3 class="text-lg font-semibold text-brand-primary">Sustainability practices</h3>
+              <ul class="mt-4 space-y-2 text-sm text-brand-dark/80 list-disc list-inside">
+                <li> Rainwater harvesting and solar-powered irrigation.</li>
+                <li> Integrated pest management with biological controls.</li>
+                <li> Soil health monitoring and regenerative crop rotation.</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-brand-primary/10 bg-white p-6 shadow-soft">
+              <h3 class="text-lg font-semibold text-brand-primary">Supply readiness</h3>
+              <ul class="mt-4 space-y-2 text-sm text-brand-dark/80 list-disc list-inside">
+                <li> HACCP-compliant packhouse with cold chain integration.</li>
+                <li> Onsite USDA pre-clearance inspection support.</li>
+                <li> Export documentation team for CARICOM & North America.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <img src="https://cdn.britannica.com/21/25921-050-5C41FA02/Pineapple-farm-Risaralda-departamento-Colombia.jpg"
+            alt="TropiHarvest farm workers harvesting pineapples"
+            class="h-full w-full rounded-3xl object-cover shadow-2xl" />
+        </div>
+      </div>
+
+      <div class="rounded-3xl border border-brand-primary/10 bg-brand-light/40 p-10 shadow-soft">
+        <h3 class="font-display text-2xl font-semibold text-brand-primary">Internationally recognized certifications
+        </h3>
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+          <div class="rounded-2xl bg-white p-6 shadow-soft">
+            <p class="text-sm uppercase tracking-wide text-brand-dark/60">Food Safety</p>
+            <h4 class="mt-2 text-xl font-semibold">HACCP Certified</h4>
+            <p class="mt-3 text-sm text-brand-dark/80">Hazard Analysis and Critical Control Points compliance across our
+              packhouse and cold storage facilities.</p>
+          </div>
+          <div class="rounded-2xl bg-white p-6 shadow-soft">
+            <p class="text-sm uppercase tracking-wide text-brand-dark/60">Farming Standards</p>
+            <h4 class="mt-2 text-xl font-semibold">GLOBAL.G.A.P.</h4>
+            <p class="mt-3 text-sm text-brand-dark/80">Good Agricultural Practices certification demonstrating
+              traceability and responsible farming inputs.</p>
+          </div>
+          <div class="rounded-2xl bg-white p-6 shadow-soft">
+            <p class="text-sm uppercase tracking-wide text-brand-dark/60">Organic Range</p>
+            <h4 class="mt-2 text-xl font-semibold">Organic Program</h4>
+            <p class="mt-3 text-sm text-brand-dark/80">Certified organic papaya and pineapple blocks with annual
+              third-party audits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="bg-brand-dark/95 py-20">
+      <div class="mx-auto max-w-6xl px-6 text-white">
+        <div class="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h2 class="font-display text-3xl font-semibold">Export-grade produce</h2>
+            <p class="mt-2 max-w-2xl text-white/70">Our produce is precision harvested, cooled within 90 minutes, and
+              packed to meet retailer-ready specifications for air and sea freight logistics.</p>
+          </div>
+          <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+            class="rounded-full bg-brand-secondary px-5 py-3 text-sm font-semibold text-brand-dark transition hover:bg-white"
+            target="_blank" rel="noopener">Download product catalogue</a>
+        </div>
+        <div class="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+          <article class="rounded-3xl bg-white/5 p-6">
+            <img src="https://www.organicindiaseeds.com/cdn/shop/files/images_34_225x.jpg?v=1740032106" alt="Papayas"
+              class="h-40 w-full rounded-2xl object-cover" />
+            <h3 class="mt-5 text-xl font-semibold">Red Caribbean Papaya</h3>
+            <p class="mt-2 text-sm text-white/70">Year-round availability with peak volumes JanAug. Packed in 10 kg
+              ventilated cartons with foam netting.</p>
+          </article>
+          <article class="rounded-3xl bg-white/5 p-6">
+            <img
+              src="https://www.healthxchange.sg/adobe/dynamicmedia/deliver/dm-aid--c06c2aed-90cf-4360-a423-7f053b2a44d9/pineapple-health-benefits-and-ways-to-enjoy.jpg?preferwebp=true"
+              alt="Pineapples" class="h-40 w-full rounded-2xl object-cover" />
+            <h3 class="mt-5 text-xl font-semibold">MD-2 Golden Pineapple</h3>
+            <p class="mt-2 text-sm text-white/70">Supply window NovJuly. Packaged crown-trimmed in 12 kg export cartons
+              with ethylene control sachets.</p>
+          </article>
+          <article class="rounded-3xl bg-white/5 p-6">
+            <img src="https://healthyfamilyproject.com/wp-content/uploads/2020/05/Bell-Peppers-background.jpg"
+              alt="Bell peppers" class="h-40 w-full rounded-2xl object-cover" />
+            <h3 class="mt-5 text-xl font-semibold">Rainbow Bell Peppers</h3>
+            <p class="mt-2 text-sm text-white/70">Year-round tri-color program. Packaged in RPC crates or 8 kg cartons
+              with modified atmosphere liners.</p>
+          </article>
+          <article class="rounded-3xl bg-white/5 p-6">
+            <img
+              src="https://www.trees.com/wp-content/uploads/products/medium/1000/Puerto-Rican-Plantain-Banana-Tree-1.webp"
+              alt="Plantains" class="h-40 w-full rounded-2xl object-cover" />
+            <h3 class="mt-5 text-xl font-semibold">Export Green Plantain</h3>
+            <p class="mt-2 text-sm text-white/70">Weekly harvest schedule. Packed in 18.1 kg reinforced cartons with
+              ventilated liners for sea freight.</p>
+          </article>
+        </div>
+        <div class="mt-12 grid gap-8 md:grid-cols-3">
+          <div class="rounded-3xl bg-brand-dark/80 p-6">
+            <h4 class="text-lg font-semibold">Temperature-controlled logistics</h4>
+            <p class="mt-2 text-sm text-white/70">Hydro-cooling, vacuum pre-cooling, and 40-foot reefers for seamless
+              cold chain integrity.</p>
+          </div>
+          <div class="rounded-3xl bg-brand-dark/80 p-6">
+            <h4 class="text-lg font-semibold">Packaging options</h4>
+            <p class="mt-2 text-sm text-white/70">Retail-ready clamshells, tray packs, RPC, and private label
+              customization available on request.</p>
+          </div>
+          <div class="rounded-3xl bg-brand-dark/80 p-6">
+            <h4 class="text-lg font-semibold">Quality assurance</h4>
+            <p class="mt-2 text-sm text-white/70">Daily residue testing, digital traceability, and real-time shipment
+              tracking dashboards.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="buyer-portal" class="mx-auto max-w-6xl px-6 py-20">
+      <div class="grid gap-12 lg:grid-cols-2">
+        <div class="space-y-6">
+          <h2 class="font-display text-3xl font-semibold text-brand-dark">B2B Buyer Portal</h2>
+          <p class="text-brand-dark/80">Our export success team partners with procurement officers, distributors, and
+            supermarket category leads to deliver consistent volumes and transparent logistics. Use the forms below to
+            start a conversation or arrange a farm immersion.</p>
+          <div class="rounded-3xl border border-brand-primary/10 bg-brand-light/50 p-8 shadow-soft">
+            <h3 class="text-xl font-semibold text-brand-primary">Why buyers choose TropiHarvest</h3>
+            <ul class="mt-4 space-y-3 text-sm text-brand-dark/80 list-disc list-inside">
+              <li> Dedicated account managers and bilingual logistics coordinators.</li>
+              <li> Integrated QC reports with every shipment.</li>
+              <li> Consolidation services from Cheddi Jagan International Airport and Georgetown Seaport.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="space-y-10">
+          <form class="space-y-4 rounded-3xl border border-brand-primary/10 bg-white p-8 shadow-soft">
+            <h3 class="text-lg font-semibold text-brand-primary">Wholesale inquiry</h3>
+            <div>
+              <label class="text-sm font-medium text-brand-dark/80" for="company">Company name</label>
+              <input id="company" type="text" placeholder="Retailer or distributor"
+                class="mt-1 w-full rounded-xl border border-brand-dark/10 bg-brand-light/40 px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/30"
+                required />
+            </div>
+            <div class="grid gap-4 md:grid-cols-2">
+              <div>
+                <label class="text-sm font-medium text-brand-dark/80" for="email">Work email</label>
+                <input id="email" type="email" placeholder="you@company.com"
+                  class="mt-1 w-full rounded-xl border border-brand-dark/10 bg-brand-light/40 px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/30"
+                  required />
+              </div>
+              <div>
+                <label class="text-sm font-medium text-brand-dark/80" for="phone">Phone</label>
+                <input id="phone" type="tel" placeholder="Intl dial code"
+                  class="mt-1 w-full rounded-xl border border-brand-dark/10 bg-brand-light/40 px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/30" />
+              </div>
+            </div>
+            <div>
+              <label class="text-sm font-medium text-brand-dark/80" for="volume">Monthly volume requirement</label>
+              <select id="volume"
+                class="mt-1 w-full rounded-xl border border-brand-dark/10 bg-brand-light/40 px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/30">
+                <option value="">Select range</option>
+                <option>Up to 1 container</option>
+                <option>1-3 containers</option>
+                <option>3-6 containers</option>
+                <option>6+ containers</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-sm font-medium text-brand-dark/80" for="message">Focus commodities</label>
+              <textarea id="message" rows="4" placeholder="Papaya, pineapple, peppers, plantain, etc."
+                class="mt-1 w-full rounded-xl border border-brand-dark/10 bg-brand-light/40 px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/30"></textarea>
+            </div>
+            <button type="submit"
+              class="w-full rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-secondary">Request
+              tailored quote</button>
+          </form>
+
+          <form class="space-y-4 rounded-3xl border border-brand-primary/10 bg-white p-8 shadow-soft">
+            <h3 class="text-lg font-semibold text-brand-primary">Schedule a farm visit/export meeting</h3>
+            <div class="grid gap-4 md:grid-cols-2">
+              <div>
+                <label class="text-sm font-medium text-brand-dark/80" for="visit-name">Contact name</label>
+                <input id="visit-name" type="text" placeholder="Full name"
+                  class="mt-1 w-full rounded-xl border border-brand-dark/10 bg-brand-light/40 px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/30"
+                  required />
+              </div>
+              <div>
+                <label class="text-sm font-medium text-brand-dark/80" for="visit-company">Organization</label>
+                <input id="visit-company" type="text" placeholder="Company"
+                  class="mt-1 w-full rounded-xl border border-brand-dark/10 bg-brand-light/40 px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/30" />
+              </div>
+            </div>
+            <div class="grid gap-4 md:grid-cols-2">
+              <div>
+                <label class="text-sm font-medium text-brand-dark/80" for="visit-date">Preferred date</label>
+                <input id="visit-date" type="date"
+                  class="mt-1 w-full rounded-xl border border-brand-dark/10 bg-brand-light/40 px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/30" />
+              </div>
+              <div>
+                <label class="text-sm font-medium text-brand-dark/80" for="visit-mode">Meeting format</label>
+                <select id="visit-mode"
+                  class="mt-1 w-full rounded-xl border border-brand-dark/10 bg-brand-light/40 px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/30">
+                  <option value="">Select</option>
+                  <option>On-farm tour</option>
+                  <option>Virtual export briefing</option>
+                  <option>Port logistics walkthrough</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label class="text-sm font-medium text-brand-dark/80" for="visit-notes">Additional notes</label>
+              <textarea id="visit-notes" rows="3"
+                placeholder="Share objectives, team size, or certifications of interest."
+                class="mt-1 w-full rounded-xl border border-brand-dark/10 bg-brand-light/40 px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/30"></textarea>
+            </div>
+            <button type="submit"
+              class="w-full rounded-full bg-brand-secondary px-6 py-3 text-sm font-semibold text-brand-dark transition hover:bg-brand-primary hover:text-white">Book
+              session</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="bg-brand-light/60 py-20">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <h2 class="font-display text-3xl font-semibold text-brand-dark">News &amp; insights</h2>
+            <p class="mt-2 max-w-xl text-brand-dark/80">Read the latest updates on crop cycles, export milestones, and
+              innovations shaping Guyana's fresh produce sector.</p>
+          </div>
+          <a href="#contact" class="text-sm font-semibold text-brand-primary hover:text-brand-secondary">Join mailing
+            list ?</a>
+        </div>
+        <div class="mt-10 grid gap-8 md:grid-cols-3">
+          <article class="rounded-3xl border border-brand-primary/10 bg-white p-8 shadow-soft">
+            <p class="text-sm uppercase tracking-wide text-brand-primary/80">March 18, 2025</p>
+            <h3 class="mt-4 text-xl font-semibold text-brand-dark">First MD-2 pineapple shipment to Canada</h3>
+            <p class="mt-3 text-sm text-brand-dark/80">TropiHarvest dispatched 4 containers with real-time temperature
+              monitoring to a major Ontario retailer, maintaining 9C throughout transit.</p>
+            <a href="#"
+              class="mt-4 inline-block text-sm font-semibold text-brand-primary hover:text-brand-secondary">Read
+              more</a>
+          </article>
+          <article class="rounded-3xl border border-brand-primary/10 bg-white p-8 shadow-soft">
+            <p class="text-sm uppercase tracking-wide text-brand-primary/80">February 4, 2025</p>
+            <h3 class="mt-4 text-xl font-semibold text-brand-dark">New solar-powered irrigation commissioning</h3>
+            <p class="mt-3 text-sm text-brand-dark/80">Our Mahaica block now runs on a 450 kW solar array, reducing
+              diesel usage by 38% and enhancing climate resilience.</p>
+            <a href="#"
+              class="mt-4 inline-block text-sm font-semibold text-brand-primary hover:text-brand-secondary">Read
+              more</a>
+          </article>
+          <article class="rounded-3xl border border-brand-primary/10 bg-white p-8 shadow-soft">
+            <p class="text-sm uppercase tracking-wide text-brand-primary/80">January 10, 2025</p>
+            <h3 class="mt-4 text-xl font-semibold text-brand-dark">Agritech partnership for digital traceability</h3>
+            <p class="mt-3 text-sm text-brand-dark/80">We have partnered with FreshChain to deliver QR-enabled carton
+              tracking, giving buyers instant access to field-level data.</p>
+            <a href="#"
+              class="mt-4 inline-block text-sm font-semibold text-brand-primary hover:text-brand-secondary">Read
+              more</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="drone" class="mx-auto max-w-6xl px-6 py-20">
+      <div class="grid gap-12 lg:grid-cols-[1.3fr_1fr]">
+        <div class="space-y-6">
+          <h2 class="font-display text-3xl font-semibold text-brand-dark">Experience TropiHarvest from above</h2>
+          <p class="text-brand-dark/80">Take a drone tour across our papaya orchards, pineapple terraces, and bell
+            pepper greenhouses. Observe our post-harvest handling and cold storage logistics in real time.</p>
+          <div class="aspect-video overflow-hidden rounded-3xl shadow-soft">
+            <iframe class="h-full w-full" src="https://www.youtube.com/embed/DrK9bm4jujs"
+              title="TropiHarvest Farms Drone Tour" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+
+          </div>
+        </div>
+        <div class="space-y-6 rounded-3xl border border-brand-primary/10 bg-brand-light/60 p-8 shadow-soft">
+          <h3 class="text-xl font-semibold text-brand-primary">Client testimonials</h3>
+          <div id="testimonial-carousel" class="relative">
+            <div class="space-y-4" data-carousel-item>
+              <p class="text-lg italic text-brand-dark/90">TropiHarvest's MD-2 pineapples arrive consistently sweet with
+                zero cold chain deviations. Their QC reports make retail planning effortless.</p>
+              <p class="text-sm font-semibold text-brand-primary"> Alexandra Moore, Category Manager, FreshCo Atlantic
+              </p>
+            </div>
+            <div class="hidden space-y-4" data-carousel-item>
+              <p class="text-lg italic text-brand-dark/90">Their pepper program is our benchmark for CARICOM sourcing.
+                Pre-conditioned shipments align perfectly with our cross-dock schedule.</p>
+              <p class="text-sm font-semibold text-brand-primary"> Ricardo James, Procurement Lead, Kingston Produce
+                Group</p>
+            </div>
+            <div class="hidden space-y-4" data-carousel-item>
+              <p class="text-lg italic text-brand-dark/90">The farm visit sealed our long-term agreement.
+                Certifications, sustainability, and transparency are unmatched in the region.</p>
+              <p class="text-sm font-semibold text-brand-primary"> Linh Nguyen, Director of Imports, Pacifica Markets
+                USA</p>
+            </div>
+            <div class="mt-6 flex justify-center space-x-2" id="testimonial-dots"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-brand-dark/95 py-20 text-white">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="grid gap-12 md:grid-cols-[1.2fr_1fr]">
+          <div class="space-y-6">
+            <h2 class="font-display text-3xl font-semibold">Connect with our export desk</h2>
+            <p class="text-white/70">Ready to co-create a tropical supply program? Our export department operates 7 days
+              a week to align with your procurement cycles.</p>
+            <div class="rounded-3xl bg-white/10 p-8 shadow-soft backdrop-blur">
+              <h3 class="text-lg font-semibold text-brand-secondary">Export Department</h3>
+              <ul class="mt-4 space-y-2 text-sm text-white/70">
+                <li>Cheddi Jagan Highway, Mahaica-Berbice, Guyana</li>
+                <li>Phone: <a href="tel:+5925550123" class="text-brand-secondary">+592 555 0123</a></li>
+                <li>Email: <a href="mailto:export@tropiharvest.gy"
+                    class="text-brand-secondary">export@tropiharvest.gy</a></li>
+                <li>Whatsapp &amp; WeChat support available on request.</li>
+              </ul>
+              <div class="mt-6 grid gap-3 text-sm text-white/70 md:grid-cols-2">
+                <p class="rounded-xl bg-white/10 p-3">Documentation team: docs@tropiharvest.gy</p>
+                <p class="rounded-xl bg-white/10 p-3">Logistics desk: logistics@tropiharvest.gy</p>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-6">
+            <div class="aspect-[4/3] overflow-hidden rounded-3xl shadow-soft">
+              <iframe title="TropiHarvest Farms map — Berbice, Guyana"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12123.456!2d-57.22!3d6.15!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNi4xNSwrMzinLjIiVw!5e0!3m2!1sen!2s!4vXXXXXXXXXXXX"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            <p class="text-sm text-white/60">Appointments required for visits. Security badges issued on arrival. Please
+              submit visit requests at least 7 business days in advance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-brand-dark py-12">
+    <div
+      class="mx-auto flex max-w-6xl flex-col gap-6 px-6 text-sm text-white/70 md:flex-row md:items-center md:justify-between">
+      <p>&copy; <span id="year"></span> TropiHarvest Farms. All rights reserved.</p>
+      <div class="flex items-center space-x-6">
+        <a href="#" class="hover:text-brand-secondary">LinkedIn</a>
+        <a href="#" class="hover:text-brand-secondary">Traceability portal</a>
+        <a href="mailto:export@tropiharvest.gy" class="hover:text-brand-secondary">export@tropiharvest.gy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const yearSpan = document.getElementById('year');
+    yearSpan.textContent = new Date().getFullYear();
+
+    const carousel = document.getElementById('testimonial-carousel');
+    const items = carousel.querySelectorAll('[data-carousel-item]');
+    const dotsContainer = document.getElementById('testimonial-dots');
+    let activeIndex = 0;
+
+    function renderDots() {
+      items.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = `h-2.5 w-2.5 rounded-full transition ${index === activeIndex ? 'bg-brand-primary' : 'bg-white/40'}`;
+        dot.addEventListener('click', () => {
+          showItem(index);
+        });
+        dotsContainer.appendChild(dot);
+      });
+    }
+
+    function showItem(index) {
+      items[activeIndex].classList.add('hidden');
+      items[index].classList.remove('hidden');
+      activeIndex = index;
+      [...dotsContainer.children].forEach((dot, idx) => {
+        dot.className = `h-2.5 w-2.5 rounded-full transition ${idx === activeIndex ? 'bg-brand-primary' : 'bg-white/40'}`;
+      });
+    }
+
+    function rotateItems() {
+      const nextIndex = (activeIndex + 1) % items.length;
+      showItem(nextIndex);
+    }
+
+    renderDots();
+    items.forEach((item, index) => {
+      if (index !== activeIndex) item.classList.add('hidden');
+    });
+
+    setInterval(rotateItems, 6000);
+  </script>
+</body>
+
+</html>

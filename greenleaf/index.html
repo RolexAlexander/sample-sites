@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenLeaf Agro Co-op | Empowering Guyanese Farmers</title>
+  <meta name="description" content="GreenLeaf Agro Co-op unites Guyanese farmers to deliver cash crops and value-added products to buyers, partners, and communities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/png" href="./logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            herb: {
+              50: '#F3F8F5',
+              100: '#DCEDE1',
+              200: '#BDDCC6',
+              300: '#96C7A4',
+              400: '#6CAE82',
+              500: '#4F966A',
+              600: '#3D7552',
+              700: '#305B40',
+              800: '#1F3D2A',
+              900: '#14281C'
+            },
+            clay: '#E8C39E',
+            sunshine: '#F6CC4E'
+          },
+          fontFamily: {
+            display: ['Source Serif Pro', 'serif'],
+            body: ['Manrope', 'sans-serif']
+          },
+          backgroundImage: {
+            'leafy-pattern': "url('https://images.unsplash.com/photo-1519092437326-bfd121eb53ae?auto=format&fit=crop&w=1600&q=80')"
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: #f8faf6;
+      color: #1f2d1d;
+    }
+    .hero-pattern::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(20, 40, 28, 0.82), rgba(76, 150, 106, 0.68));
+      mix-blend-mode: multiply;
+    }
+  </style>
+</head>
+<body class="bg-herb-50">
+  <header class="relative overflow-hidden">
+    <div class="hero-pattern relative min-h-[75vh] bg-leafy-pattern bg-cover bg-center">
+      <div class="absolute inset-0 bg-herb-900/70"></div>
+      <div class="relative z-10">
+        <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 text-herb-50">
+          <div class="flex items-center gap-4">
+            <span class="flex h-14 w-14 items-center justify-center rounded-full border border-sunshine text-xl font-semibold">GL</span>
+            <div>
+              <p class="font-display text-2xl tracking-wide">GreenLeaf Agro Co-op</p>
+              <p class="text-sm uppercase tracking-[0.35em] text-herb-100">Guyana</p>
+            </div>
+          </div>
+          <div class="hidden items-center gap-8 text-sm font-medium uppercase tracking-wide md:flex">
+            <a href="#about" class="transition hover:text-sunshine">About</a>
+            <a href="#products" class="transition hover:text-sunshine">Products</a>
+            <a href="#impact" class="transition hover:text-sunshine">Impact</a>
+            <a href="#membership" class="transition hover:text-sunshine">Membership</a>
+            <a href="#contact" class="transition hover:text-sunshine">Contact</a>
+          </div>
+          <a href="#contact" class="rounded-full bg-sunshine px-5 py-2 text-sm font-semibold text-herb-900 shadow-lg transition hover:bg-white">Buy Direct</a>
+        </nav>
+        <section class="mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-20 pt-10 text-herb-50 md:flex-row md:items-center">
+          <div class="flex-1 space-y-6">
+            <span class="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-xs uppercase tracking-[0.45em]">Farmer Owned</span>
+            <h1 class="font-display text-4xl font-semibold leading-tight md:text-5xl">Support Guyanese farmers &ndash; Buy Direct.</h1>
+            <p class="max-w-xl text-lg text-herb-100">GreenLeaf Agro Co-op brings together smallholder farmers from Regions 3, 4, and 5 to supply cassava, eddoes, peanuts, and plantain-based products straight from the source. Every contract uplifts a village, funds training, and secures food resilience for Guyana.</p>
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="#contact" class="rounded-full bg-sunshine px-6 py-3 text-sm font-semibold text-herb-900 transition hover:bg-white">Get Started</a>
+              <a href="#impact" class="rounded-full border border-white/70 px-6 py-3 text-sm font-semibold transition hover:bg-white hover:text-herb-700">See our impact</a>
+            </div>
+            <div class="flex flex-wrap gap-8 pt-4 text-sm">
+              <div>
+                <p class="text-3xl font-semibold text-white">312</p>
+                <p class="text-herb-100">member farmers</p>
+              </div>
+              <div>
+                <p class="text-3xl font-semibold text-white">68%</p>
+                <p class="text-herb-100">income growth since 2021</p>
+              </div>
+              <div>
+                <p class="text-3xl font-semibold text-white">12</p>
+                <p class="text-herb-100">NGO & agency partners</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1 rounded-3xl border border-white/20 bg-white/10 p-8 backdrop-blur">
+            <h2 class="font-display text-2xl text-sunshine">Cooperative sourcing advantages</h2>
+            <ul class="mt-6 space-y-4 text-sm text-herb-100">
+              <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-sunshine"></span><span>Traceable produce aggregated from Guyana's coastal plains and intermediate savannahs.</span></li>
+              <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-sunshine"></span><span>Bulk and retail-ready fulfillment with HACCP-certified processing spaces.</span></li>
+              <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-sunshine"></span><span>Transparent farmer payouts and impact reporting for ESG portfolios.</span></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="relative overflow-hidden py-20">
+      <div class="absolute inset-0 bg-gradient-to-br from-white via-herb-50 to-herb-100"></div>
+      <div class="relative mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-[1.3fr_1fr]">
+        <div class="space-y-8">
+          <h2 class="font-display text-3xl text-herb-800">Mission-led cooperative rooted in trust</h2>
+          <p class="text-herb-700">GreenLeaf Agro Co-op was founded in 2009 by a cohort of coastal Guyanese farmers seeking stronger bargaining power, shared agronomy expertise, and equitable market access. Today, we collective-purchase inputs, operate shared post-harvest hubs, and co-invest in processing ventures that keep more value within rural communities.</p>
+          <div class="grid gap-6 md:grid-cols-3">
+            <div class="rounded-2xl border border-herb-200 bg-white p-6 shadow-lg shadow-herb-900/5">
+              <p class="text-xs uppercase tracking-[0.4em] text-herb-500">Mission</p>
+              <p class="mt-3 text-herb-800">Empower farmers through shared ownership and regenerative cash crop systems.</p>
+            </div>
+            <div class="rounded-2xl border border-herb-200 bg-white p-6 shadow-lg shadow-herb-900/5">
+              <p class="text-xs uppercase tracking-[0.4em] text-herb-500">Vision</p>
+              <p class="mt-3 text-herb-800">Guyana recognized as a premium supplier of ethical, traceable staple crops and value-added goods.</p>
+            </div>
+            <div class="rounded-2xl border border-herb-200 bg-white p-6 shadow-lg shadow-herb-900/5">
+              <p class="text-xs uppercase tracking-[0.4em] text-herb-500">Values</p>
+              <p class="mt-3 text-herb-800">Collective ownership, ecological stewardship, gender equity, and transparent governance.</p>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <div class="rounded-3xl border border-herb-200 bg-white/90 p-6 shadow-lg shadow-herb-900/10">
+            <h3 class="font-display text-xl text-herb-700">Lead farmer council</h3>
+            <p class="mt-3 text-sm text-herb-600">Our council sets crop strategy, quality protocols, and youth mentorship programs.</p>
+            <div class="mt-6 space-y-4">
+              <div class="flex items-center gap-4">
+                <img src="https://thumbs.dreamstime.com/b/african-businesswoman-using-laptop-gesturing-thumbs-up-modern-office-cheerful-american-computer-approving-website-working-255717798.jpg" alt="Lead farmer" class="h-14 w-14 rounded-full object-cover" />
+                <div>
+                  <p class="text-sm font-semibold text-herb-800">Evelyn Fraser</p>
+                  <p class="text-xs text-herb-600">Chair, Cassava Innovation Program</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <img src="https://thumbs.dreamstime.com/b/happy-black-businessman-laptop-gesturing-thumbs-up-sitting-office-posing-smiling-to-camera-modern-i-like-my-business-395227790.jpg" alt="Lead farmer" class="h-14 w-14 rounded-full object-cover" />
+                <div>
+                  <p class="text-sm font-semibold text-herb-800">Michael Singh</p>
+                  <p class="text-xs text-herb-600">Processing & cold chain lead</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <img src="https://media.istockphoto.com/id/1129638608/photo/smiling-businesswoman-looking-at-camera-webcam-make-conference-business-call.jpg?s=612x612&w=0&k=20&c=NH4ZQvdy7E8Gnen21e50zgKjbZzgNygnrVzCI0E3u9o=" alt="Lead farmer" class="h-14 w-14 rounded-full object-cover" />
+                <div>
+                  <p class="text-sm font-semibold text-herb-800">Vidia Ram</p>
+                  <p class="text-xs text-herb-600">Sustainable cropping mentor</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="products" class="bg-herb-900 py-20 text-herb-50">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-[0.4em] text-herb-300">Products</p>
+            <h2 class="mt-3 font-display text-3xl text-white">Cash crops and value-added pantry staples</h2>
+            <p class="mt-4 max-w-2xl text-herb-200">We handle planting, harvest, cleaning, milling, and packaging across dedicated facilities. Pricing references FOB Georgetown; volume discounts available beyond stated tiers.</p>
+          </div>
+          <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" rel="noopener" class="rounded-full border border-sunshine px-5 py-2 text-sm font-semibold text-sunshine transition hover:bg-sunshine hover:text-herb-900">Download wholesale sheet</a>
+        </div>
+        <div class="mt-12 grid gap-10 lg:grid-cols-[1.1fr_1fr]">
+          <div class="space-y-6 rounded-3xl bg-white/5 p-8">
+            <h3 class="text-xl font-semibold text-sunshine">Cash crops</h3>
+            <div class="space-y-6">
+              <article class="flex flex-col gap-4 rounded-2xl bg-white/5 p-5 md:flex-row">
+                <img src="https://www.shutterstock.com/image-photo/bunch-freshly-harvested-cassava-roots-600nw-2619866565.jpg" alt="Cassava" class="h-28 w-28 rounded-xl object-cover" />
+                <div>
+                  <h4 class="text-lg font-semibold">Cassava (fresh tubers)</h4>
+                  <p class="text-sm text-herb-200">Graded & washed, 25 kg sacks.</p>
+                  <dl class="mt-3 grid grid-cols-2 gap-3 text-xs text-herb-300">
+                    <div><dt class="uppercase tracking-widest">Bulk</dt><dd class="text-sunshine">US$380/MT</dd></div>
+                    <div><dt class="uppercase tracking-widest">Packaged</dt><dd class="text-sunshine">G$45/2kg retail bag</dd></div>
+                  </dl>
+                </div>
+              </article>
+              <article class="flex flex-col gap-4 rounded-2xl bg-white/5 p-5 md:flex-row">
+                <img src="https://villar.com.do/cdn/shop/products/eddoe1.png?v=1637155435" alt="Eddoes" class="h-28 w-28 rounded-xl object-cover" />
+                <div>
+                  <h4 class="text-lg font-semibold">Eddoes</h4>
+                  <p class="text-sm text-herb-200">Size-sorted for retail trays or bulk bins.</p>
+                  <dl class="mt-3 grid grid-cols-2 gap-3 text-xs text-herb-300">
+                    <div><dt class="uppercase tracking-widest">Bulk</dt><dd class="text-sunshine">US$420/MT</dd></div>
+                    <div><dt class="uppercase tracking-widest">Packaged</dt><dd class="text-sunshine">G$52/2kg tray</dd></div>
+                  </dl>
+                </div>
+              </article>
+              <article class="flex flex-col gap-4 rounded-2xl bg-white/5 p-5 md:flex-row">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBB9JGXhIa-qfUjVLEuivzr3FAOhD0OngvVQ&s" alt="Peanuts" class="h-28 w-28 rounded-xl object-cover" />
+                <div>
+                  <h4 class="text-lg font-semibold">Peanuts (raw & roasted)</h4>
+                  <p class="text-sm text-herb-200">Shell-on or blanched kernels.</p>
+                  <dl class="mt-3 grid grid-cols-2 gap-3 text-xs text-herb-300">
+                    <div><dt class="uppercase tracking-widest">Bulk</dt><dd class="text-sunshine">US$1.48/kg</dd></div>
+                    <div><dt class="uppercase tracking-widest">Packaged</dt><dd class="text-sunshine">G$600/400g pouch</dd></div>
+                  </dl>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="space-y-6 rounded-3xl bg-white/5 p-8">
+            <h3 class="text-xl font-semibold text-sunshine">Processed goods</h3>
+            <div class="space-y-6">
+              <article class="rounded-2xl bg-white/5 p-5">
+                <div class="flex flex-col gap-4 md:flex-row">
+                  <img src="https://media.post.rvohealth.io/wp-content/uploads/2022/03/cassava-flour-on-spoon-1200-628-facebook-1200x628.jpg" alt="Cassava flour" class="h-28 w-28 rounded-xl object-cover" />
+                  <div>
+                    <h4 class="text-lg font-semibold">Cassava flour (gluten-free)</h4>
+                    <p class="text-sm text-herb-200">Stone-milled, moisture controlled to 10%.</p>
+                    <dl class="mt-3 grid grid-cols-2 gap-3 text-xs text-herb-300">
+                      <div><dt class="uppercase tracking-widest">Bulk</dt><dd class="text-sunshine">US$1,050/MT</dd></div>
+                      <div><dt class="uppercase tracking-widest">Packaged</dt><dd class="text-sunshine">G$720/900g pack</dd></div>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <article class="rounded-2xl bg-white/5 p-5">
+                <div class="flex flex-col gap-4 md:flex-row">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtpuSBWciymJ4tLl0GA7Y3qKSYIZBITDtrvQ&s" alt="Peanut butter" class="h-28 w-28 rounded-xl object-cover" />
+                  <div>
+                    <h4 class="text-lg font-semibold">Natural peanut butter</h4>
+                    <p class="text-sm text-herb-200">No added sugar; available crunchy or smooth.</p>
+                    <dl class="mt-3 grid grid-cols-2 gap-3 text-xs text-herb-300">
+                      <div><dt class="uppercase tracking-widest">Bulk</dt><dd class="text-sunshine">US$3.10/kg</dd></div>
+                      <div><dt class="uppercase tracking-widest">Packaged</dt><dd class="text-sunshine">G$950/425g jar</dd></div>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <article class="rounded-2xl bg-white/5 p-5">
+                <div class="flex flex-col gap-4 md:flex-row">
+                  <img src="https://zeemart.shop/wp-content/uploads/2021/04/plantain-flour.jpg" alt="Plantain flour" class="h-28 w-28 rounded-xl object-cover" />
+                  <div>
+                    <h4 class="text-lg font-semibold">Plantain flour (prebiotic)</h4>
+                    <p class="text-sm text-herb-200">Low-temperature dried for nutrient retention.</p>
+                    <dl class="mt-3 grid grid-cols-2 gap-3 text-xs text-herb-300">
+                      <div><dt class="uppercase tracking-widest">Bulk</dt><dd class="text-sunshine">US$890/MT</dd></div>
+                      <div><dt class="uppercase tracking-widest">Packaged</dt><dd class="text-sunshine">G$680/800g pack</dd></div>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="impact" class="relative py-20">
+      <div class="absolute inset-0 bg-white"></div>
+      <div class="relative mx-auto max-w-6xl px-6">
+        <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+          <div class="max-w-2xl space-y-4">
+            <p class="text-xs uppercase tracking-[0.4em] text-herb-500">Community Impact</p>
+            <h2 class="font-display text-3xl text-herb-800">Elevating livelihoods and food security</h2>
+            <p class="text-herb-700">Each procurement contract directly funds family farms, school nutrition programs, and agro-processing innovations. We report on literacy trainings, climate-smart investments, and women-led agribusiness success stories.</p>
+          </div>
+          <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" rel="noopener" class="rounded-full bg-herb-900 px-5 py-2 text-sm font-semibold text-herb-50 transition hover:bg-herb-700">Download 2024 impact report</a>
+        </div>
+        <div class="mt-12 grid gap-8 md:grid-cols-3">
+          <article class="rounded-3xl border border-herb-100 bg-herb-50 p-6 shadow-lg shadow-herb-900/5">
+            <p class="text-sm font-semibold text-herb-700">Sharon's cassava village</p>
+            <p class="mt-3 text-sm text-herb-600">A micro-mill financed by the co-op now processes 1.2 MT cassava daily, hiring eight women and supplying national school feeding programs.</p>
+          </article>
+          <article class="rounded-3xl border border-herb-100 bg-herb-50 p-6 shadow-lg shadow-herb-900/5">
+            <p class="text-sm font-semibold text-herb-700">Peanut allergen labs</p>
+            <p class="mt-3 text-sm text-herb-600">Our partnership with the Ministry of Agriculture outfitted testing facilities that certify export-ready batches for Barbados and Trinidad.</p>
+          </article>
+          <article class="rounded-3xl border border-herb-100 bg-herb-50 p-6 shadow-lg shadow-herb-900/5">
+            <p class="text-sm font-semibold text-herb-700">Youth agropreneurs</p>
+            <p class="mt-3 text-sm text-herb-600">38 young members completed regenerative soil workshops co-funded by FAO, leading to 15 hectares converted to cover cropping.</p>
+          </article>
+        </div>
+        <div class="mt-12 rounded-3xl border border-herb-100 bg-white p-8 shadow-lg shadow-herb-900/5">
+          <h3 class="font-display text-2xl text-herb-800">Partnering for scale</h3>
+          <div class="mt-6 grid gap-6 md:grid-cols-2">
+            <ul class="space-y-3 text-sm text-herb-700">
+              <li> Food for the Poor Guyana  warehouse co-investment</li>
+              <li> Ministry of Agriculture  extension and soil labs</li>
+              <li> UNDP Guyana  climate resilience grants</li>
+            </ul>
+            <ul class="space-y-3 text-sm text-herb-700">
+              <li> Women Agro-Processors Network  packaging incubator</li>
+              <li> CARICOM Secretariat  export facilitation coaching</li>
+              <li> Global Giving donors  revolving credit fund</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="membership" class="bg-herb-100 py-20">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="grid gap-12 lg:grid-cols-[1.1fr_1fr]">
+          <div class="space-y-6">
+            <p class="text-xs uppercase tracking-[0.4em] text-herb-600">Co-op Membership</p>
+            <h2 class="font-display text-3xl text-herb-800">Grow with us</h2>
+            <p class="text-herb-700">Farmers across Guyana can apply to join GreenLeaf Agro Co-op for shared marketing, agronomic support, and access to processing infrastructure. Members own equity shares and receive annual patronage dividends.</p>
+            <div class="rounded-3xl border border-herb-200 bg-white p-6 shadow-lg shadow-herb-900/5">
+              <h3 class="font-semibold text-herb-700">Membership benefits</h3>
+              <ul class="mt-4 space-y-3 text-sm text-herb-600">
+                <li> Guaranteed crop offtake agreements with fair pricing.</li>
+                <li> Access to co-op mechanization pool and seed banks.</li>
+                <li> Training on regenerative practices, financial literacy, and food safety.</li>
+                <li> Inclusion in export marketing and branding campaigns.</li>
+              </ul>
+            </div>
+          </div>
+          <form class="space-y-4 rounded-3xl border border-herb-200 bg-white p-8 shadow-lg shadow-herb-900/10">
+            <h3 class="text-lg font-semibold text-herb-700">Apply for membership</h3>
+            <div class="grid gap-4 md:grid-cols-2">
+              <div>
+                <label for="app-name" class="text-sm font-medium text-herb-700">Full name</label>
+                <input id="app-name" type="text" placeholder="First and last name" class="mt-1 w-full rounded-xl border border-herb-200 bg-herb-50 px-4 py-3 text-sm focus:border-herb-500 focus:outline-none focus:ring-2 focus:ring-herb-300" required />
+              </div>
+              <div>
+                <label for="app-parish" class="text-sm font-medium text-herb-700">Region / village</label>
+                <input id="app-parish" type="text" placeholder="Region No. / Village" class="mt-1 w-full rounded-xl border border-herb-200 bg-herb-50 px-4 py-3 text-sm focus:border-herb-500 focus:outline-none focus:ring-2 focus:ring-herb-300" required />
+              </div>
+            </div>
+            <div>
+              <label for="app-crops" class="text-sm font-medium text-herb-700">Primary crops</label>
+              <input id="app-crops" type="text" placeholder="Cassava, peanuts, eddoes, etc." class="mt-1 w-full rounded-xl border border-herb-200 bg-herb-50 px-4 py-3 text-sm focus:border-herb-500 focus:outline-none focus:ring-2 focus:ring-herb-300" />
+            </div>
+            <div>
+              <label for="app-acreage" class="text-sm font-medium text-herb-700">Cultivated acreage</label>
+              <select id="app-acreage" class="mt-1 w-full rounded-xl border border-herb-200 bg-herb-50 px-4 py-3 text-sm focus:border-herb-500 focus:outline-none focus:ring-2 focus:ring-herb-300">
+                <option value="">Select range</option>
+                <option>&lt; 5 acres</option>
+                <option>5 - 15 acres</option>
+                <option>15 - 25 acres</option>
+                <option>&gt; 25 acres</option>
+              </select>
+            </div>
+            <div>
+              <label for="app-message" class="text-sm font-medium text-herb-700">Tell us about your farm</label>
+              <textarea id="app-message" rows="4" placeholder="Share production goals, certifications, or support needed." class="mt-1 w-full rounded-xl border border-herb-200 bg-herb-50 px-4 py-3 text-sm focus:border-herb-500 focus:outline-none focus:ring-2 focus:ring-herb-300"></textarea>
+            </div>
+            <button type="submit" class="w-full rounded-full bg-herb-800 px-6 py-3 text-sm font-semibold text-herb-50 transition hover:bg-herb-600">Submit application</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="media" class="py-20">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-[0.4em] text-herb-500">Media</p>
+            <h2 class="font-display text-3xl text-herb-800">Workshop moments & cooperative pride</h2>
+            <p class="mt-3 text-herb-600">Snapshots from co-op assemblies, capacity-building sessions, and value-added production labs.</p>
+          </div>
+          <div class="flex flex-col gap-2 text-sm text-herb-600">
+            <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-herb-400 px-4 py-2 transition hover:bg-herb-100">Annual report 2024</a>
+            <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-herb-400 px-4 py-2 transition hover:bg-herb-100">Funding & partner dossier</a>
+          </div>
+        </div>
+        <div class="mt-10 grid gap-5 md:grid-cols-3">
+          <img src="https://manoamano.org/wp-content/uploads/2022/10/20221003_112621-scaled.jpg" alt="Co-op meeting" class="h-56 w-full rounded-3xl object-cover shadow-lg shadow-herb-900/5" />
+          <img src="https://growingformarket.com/custom/2020%20issues/NovDec%202020/Logan_Gathering%20Together%20Farm_web.jpg" alt="Training workshop" class="h-56 w-full rounded-3xl object-cover shadow-lg shadow-herb-900/5" />
+          <img src="https://travel.utah.gov/wp-content/uploads/DinnerHighlight-NatalieRandall1.jpg" alt="Processing facility" class="h-56 w-full rounded-3xl object-cover shadow-lg shadow-herb-900/5" />
+        </div>
+        <div class="mt-8 rounded-3xl border border-herb-100 bg-herb-50 p-8 shadow-lg shadow-herb-900/5">
+          <h3 class="font-display text-xl text-herb-700">Voices from the field</h3>
+          <div class="mt-4 grid gap-6 md:grid-cols-3">
+            <p class="text-sm text-herb-600">Pooling together lets us buy irrigation kits and plantain chips dryers we could never afford alone.  <span class="font-semibold text-herb-700">D. Joseph, Mahaica</span></p>
+            <p class="text-sm text-herb-600">NGO partners choose GreenLeaf because they see direct farmer dividends and sustainable land management.  <span class="font-semibold text-herb-700">L. Samaroo, Partnership Desk</span></p>
+            <p class="text-sm text-herb-600">Our agro-processing lab created 28 jobs for school leavers and added value to every root crop.  <span class="font-semibold text-herb-700">R. Persaud, Production Lead</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="bg-herb-900 py-20 text-herb-50">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="grid gap-12 lg:grid-cols-[1.1fr_1fr]">
+          <div class="space-y-6">
+            <p class="text-xs uppercase tracking-[0.4em] text-herb-300">Contact</p>
+            <h2 class="font-display text-3xl text-white">Connect with the cooperative office</h2>
+            <p class="text-herb-200">Whether you are sourcing ingredients, funding farmer resilience, or building agro-processing ecosystems, we would love to collaborate.</p>
+            <div class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+              <h3 class="text-lg font-semibold text-sunshine">Co-op Secretariat</h3>
+              <ul class="mt-3 space-y-2 text-sm text-herb-100">
+                <li>Lot 12 Friendship, E.B.D., Guyana</li>
+                <li>Phone: <a href="tel:+5925550456" class="text-sunshine">+592 555 0456</a></li>
+                <li>Email: <a href="mailto:hello@greenleafcoop.gy" class="text-sunshine">hello@greenleafcoop.gy</a></li>
+                <li>Office hours: Mon  Sat, 8:00 AM to 6:00 PM</li>
+              </ul>
+            </div>
+          </div>
+          <div class="space-y-8">
+            <form class="space-y-4 rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur">
+              <h3 class="text-lg font-semibold text-sunshine">General inquiry</h3>
+              <div class="grid gap-4 md:grid-cols-2">
+                <div>
+                  <label for="contact-name" class="text-xs font-medium uppercase tracking-wide text-herb-200">Name</label>
+                  <input id="contact-name" type="text" placeholder="Full name" class="mt-1 w-full rounded-xl border border-white/20 bg-white/20 px-4 py-3 text-sm text-white focus:border-sunshine focus:outline-none focus:ring-2 focus:ring-sunshine/40" required />
+                </div>
+                <div>
+                  <label for="contact-email" class="text-xs font-medium uppercase tracking-wide text-herb-200">Email</label>
+                  <input id="contact-email" type="email" placeholder="name@company.com" class="mt-1 w-full rounded-xl border border-white/20 bg-white/20 px-4 py-3 text-sm text-white focus:border-sunshine focus:outline-none focus:ring-2 focus:ring-sunshine/40" required />
+                </div>
+              </div>
+              <div>
+                <label for="contact-topic" class="text-xs font-medium uppercase tracking-wide text-herb-200">Topic</label>
+                <select id="contact-topic" class="mt-1 w-full rounded-xl border border-white/20 bg-white/20 px-4 py-3 text-sm text-white focus:border-sunshine focus:outline-none focus:ring-2 focus:ring-sunshine/40">
+                  <option value="">Select</option>
+                  <option>Product order</option>
+                  <option>Impact partnership</option>
+                  <option>Media</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label for="contact-message" class="text-xs font-medium uppercase tracking-wide text-herb-200">Message</label>
+                <textarea id="contact-message" rows="4" placeholder="Share your request" class="mt-1 w-full rounded-xl border border-white/20 bg-white/20 px-4 py-3 text-sm text-white focus:border-sunshine focus:outline-none focus:ring-2 focus:ring-sunshine/40"></textarea>
+              </div>
+              <button type="submit" class="w-full rounded-full bg-sunshine px-6 py-3 text-sm font-semibold text-herb-900 transition hover:bg-white">Send message</button>
+            </form>
+            <form class="space-y-4 rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur">
+              <h3 class="text-lg font-semibold text-sunshine">NGO & government partners</h3>
+              <div class="grid gap-4 md:grid-cols-2">
+                <div>
+                  <label for="partner-org" class="text-xs font-medium uppercase tracking-wide text-herb-200">Organization</label>
+                  <input id="partner-org" type="text" placeholder="Agency or NGO" class="mt-1 w-full rounded-xl border border-white/20 bg-white/20 px-4 py-3 text-sm text-white focus:border-sunshine focus:outline-none focus:ring-2 focus:ring-sunshine/40" required />
+                </div>
+                <div>
+                  <label for="partner-officer" class="text-xs font-medium uppercase tracking-wide text-herb-200">Contact person</label>
+                  <input id="partner-officer" type="text" placeholder="Full name" class="mt-1 w-full rounded-xl border border-white/20 bg-white/20 px-4 py-3 text-sm text-white focus:border-sunshine focus:outline-none focus:ring-2 focus:ring-sunshine/40" />
+                </div>
+              </div>
+              <div>
+                <label for="partner-focus" class="text-xs font-medium uppercase tracking-wide text-herb-200">Focus area</label>
+                <select id="partner-focus" class="mt-1 w-full rounded-xl border border-white/20 bg-white/20 px-4 py-3 text-sm text-white focus:border-sunshine focus:outline-none focus:ring-2 focus:ring-sunshine/40">
+                  <option value="">Select</option>
+                  <option>Climate resilience</option>
+                  <option>Agro-processing</option>
+                  <option>Livelihoods</option>
+                  <option>Financing</option>
+                </select>
+              </div>
+              <div>
+                <label for="partner-message" class="text-xs font-medium uppercase tracking-wide text-herb-200">Project outline</label>
+                <textarea id="partner-message" rows="3" placeholder="Share program goals, timelines, co-funding options." class="mt-1 w-full rounded-xl border border-white/20 bg-white/20 px-4 py-3 text-sm text-white focus:border-sunshine focus:outline-none focus:ring-2 focus:ring-sunshine/40"></textarea>
+              </div>
+              <button type="submit" class="w-full rounded-full bg-white px-6 py-3 text-sm font-semibold text-herb-900 transition hover:bg-sunshine">Propose collaboration</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-herb-200 py-10 text-sm text-herb-900">
+    <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
+      <p>&copy; <span id="footer-year"></span> GreenLeaf Agro Co-op. All cooperative revenues are reinvested in Guyanese farming communities.</p>
+      <div class="flex items-center gap-6">
+        <a href="#" class="transition hover:text-white">Facebook</a>
+        <a href="#" class="transition hover:text-white">LinkedIn</a>
+        <a href="mailto:hello@greenleafcoop.gy" class="transition hover:text-white">hello@greenleafcoop.gy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+
+
+
+
