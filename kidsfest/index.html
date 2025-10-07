@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kids Fest Collective | Imaginative Celebrations & Family Experiences</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#f47b25",
+              secondary: "#ffa94d",
+              "background-light": "#f8f7f5",
+              "background-dark": "#221710",
+              cocoa: "#4d4038",
+              sand: "#d9c8bb",
+            },
+            fontFamily: {
+              display: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            boxShadow: {
+              glow: "0 20px 60px rgba(244, 123, 37, 0.25)",
+            },
+            borderRadius: {
+              xl: "1.5rem",
+            },
+            backgroundImage: {
+              confetti:
+                "radial-gradient(circle at 20% 20%, rgba(244,123,37,0.12), transparent 45%), radial-gradient(circle at 80% 0%, rgba(255,169,77,0.14), transparent 45%), radial-gradient(circle at 10% 80%, rgba(77,64,56,0.08), transparent 40%)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-background-light text-cocoa">
+    <div class="relative overflow-x-hidden">
+      <header class="sticky top-0 z-30 bg-background-light/80 backdrop-blur-md shadow-sm">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+          <a href="#top" class="flex items-center gap-3">
+            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary text-white shadow-glow">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  clip-rule="evenodd"
+                  d="M39.475 21.626c.883-.19 1.211-.068 1.283-.033.03.062.097.264.05.741-.067.692-.358 1.671-.951 2.897-1.177 2.433-3.349 5.433-6.272 8.356-2.922 2.923-5.922 5.094-8.355 6.272-1.226.593-2.205.884-2.897.951-.476.046-.678-.021-.74-.05-.035-.072-.157-.4.033-1.283.23-1.07.843-2.51 1.877-4.195 1.254-2.04 3.046-4.308 5.258-6.52 2.213-2.212 4.48-4.004 6.52-5.258 1.684-1.034 3.125-1.646 4.195-1.877ZM4.412 29.24 18.76 43.588c1.121 1.122 2.642 1.33 3.961 1.201 1.337-.13 2.793-.626 4.25-1.331 2.933-1.419 6.29-3.892 9.442-7.044 3.153-3.152 5.625-6.509 7.044-9.442.705-1.457 1.201-2.913 1.331-4.25.128-1.319-.08-2.84-1.201-3.962L29.24 4.412C27.853 3.024 25.877 3.026 24.287 3.368c-1.678.361-3.553 1.216-5.447 2.38-2.342 1.439-4.852 3.435-7.254 5.838-2.402 2.402-4.398 4.912-5.837 7.254-1.164 1.894-2.019 3.769-2.38 5.447-.342 1.59-.343 3.566 1.043 4.953Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </span>
+            <div>
+              <p class="text-lg font-extrabold text-cocoa">Kids Fest Collective</p>
+              <p class="text-xs font-semibold uppercase tracking-[0.25em] text-cocoa/60">Events &amp; Experiences</p>
+            </div>
+          </a>
+          <nav class="hidden items-center gap-10 text-sm font-semibold text-cocoa/70 md:flex">
+            <a href="#about" class="transition hover:text-primary">About</a>
+            <a href="#services" class="transition hover:text-primary">Services</a>
+            <a href="#gallery" class="transition hover:text-primary">Gallery</a>
+            <a href="#story" class="transition hover:text-primary">Story</a>
+            <a href="#testimonials" class="transition hover:text-primary">Testimonials</a>
+            <a href="#contact" class="transition hover:text-primary">Contact</a>
+          </nav>
+          <div class="flex items-center gap-4">
+            <a
+              href="#contact"
+              class="hidden rounded-full bg-primary px-5 py-2 text-sm font-bold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-secondary md:inline-flex"
+              >Plan With Us</a
+            >
+            <button
+              type="button"
+              id="menu-button"
+              class="flex h-11 w-11 items-center justify-center rounded-xl border border-cocoa/10 text-cocoa transition hover:border-primary hover:text-primary md:hidden"
+            >
+              <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+          </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden">
+          <div class="mx-4 mb-4 rounded-2xl border border-cocoa/10 bg-white/90 p-4 shadow-xl">
+            <nav class="flex flex-col gap-3 text-sm font-semibold text-cocoa">
+              <a href="#about" class="rounded-xl px-3 py-2 transition hover:bg-primary/10">About</a>
+              <a href="#services" class="rounded-xl px-3 py-2 transition hover:bg-primary/10">Services</a>
+              <a href="#gallery" class="rounded-xl px-3 py-2 transition hover:bg-primary/10">Gallery</a>
+              <a href="#story" class="rounded-xl px-3 py-2 transition hover:bg-primary/10">Story</a>
+              <a href="#testimonials" class="rounded-xl px-3 py-2 transition hover:bg-primary/10">Testimonials</a>
+              <a href="#contact" class="rounded-xl px-3 py-2 transition hover:bg-primary/10">Contact</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main id="top" class="relative w-full">
+        <section class="relative overflow-hidden bg-gradient-to-br from-background-light via-white to-sand/20">
+  <div class="relative mx-auto flex max-w-7xl flex-col lg:flex-row lg:items-center px-4 sm:px-6 lg:px-8 py-24 lg:py-32 gap-16">
+    
+    <!-- Left Content -->
+    <div class="max-w-xl space-y-8 lg:w-1/2">
+      <h1 class="text-4xl sm:text-5xl xl:text-6xl font-extrabold leading-tight tracking-tight text-cocoa">
+        Ignite <span class="text-primary">magical celebrations</span> with 
+        <span class="text-secondary">Kids Fest Collective</span>
+      </h1>
+      <p class="text-lg lg:text-xl text-cocoa/70">
+        From whimsical birthdays to campus takeovers—our team orchestrates immersive experiences that bring every story to life.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+        <a href="#services" 
+           class="inline-flex items-center justify-center rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:-translate-y-0.5 hover:bg-secondary hover:shadow-glow">
+           Plan an Event
+        </a>
+        <a href="#contact" 
+           class="inline-flex items-center justify-center rounded-full border border-primary px-8 py-3.5 text-sm font-semibold text-primary transition hover:-translate-y-0.5 hover:bg-primary hover:text-white">
+          Find a Vendor
+        </a>
+      </div>
+
+      <!-- Quick stats like Spectra -->
+      <div class="grid grid-cols-2 gap-6 pt-6">
+        <div>
+          <p class="text-3xl font-extrabold text-primary">1,200+</p>
+          <p class="text-sm font-semibold text-cocoa/60">Celebrations hosted</p>
+        </div>
+        <div>
+          <p class="text-3xl font-extrabold text-primary">95%</p>
+          <p class="text-sm font-semibold text-cocoa/60">Happy families</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Content (Image + vendor overlays like WeddingBox) -->
+    <div class="relative lg:w-1/2 flex justify-center">
+      <div class="relative max-w-2xl">
+        <img 
+          src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80" 
+          alt="Kids Celebration Party" 
+          class="w-full rounded-3xl shadow-xl"
+        />
+
+        <!-- Vendor card overlays -->
+        <div class="absolute left-6 top-12 flex items-center gap-3 rounded-2xl bg-white/95 px-4 py-3 shadow-xl backdrop-blur-sm">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" 
+               alt="Vendor" class="h-10 w-10 rounded-full object-cover" />
+          <div>
+            <p class="text-sm font-bold text-cocoa">Catherine</p>
+            <p class="text-xs text-cocoa/60">87 events</p>
+          </div>
+          <span class="ml-2 rounded-full bg-secondary px-3 py-1 text-xs font-bold text-white">from $350</span>
+        </div>
+
+        <div class="absolute right-6 bottom-16 flex items-center gap-3 rounded-2xl bg-white/95 px-4 py-3 shadow-xl backdrop-blur-sm">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" 
+               alt="Vendor" class="h-10 w-10 rounded-full object-cover" />
+          <div>
+            <p class="text-sm font-bold text-cocoa">Egor</p>
+            <p class="text-xs text-cocoa/60">125 events</p>
+          </div>
+          <span class="ml-2 rounded-full bg-primary px-3 py-1 text-xs font-bold text-white">from $400</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        <section id="about" class="py-20 sm:py-24">
+          <div class="mx-auto flex max-w-6xl flex-col gap-16 px-4 sm:px-6 lg:flex-row lg:items-start lg:px-8">
+            <div class="lg:w-2/5">
+              <span class="inline-flex items-center rounded-full bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.3em] text-primary">
+                About Kids Fest Collective
+              </span>
+              <h2 class="mt-6 text-3xl font-extrabold text-cocoa sm:text-4xl">We choreograph unforgettable kids' celebrations without the chaos.</h2>
+              <p class="mt-4 text-base text-cocoa/75">
+                Founded by parents, educators, and designers, Kids Fest Collective delivers immersive celebrations that champion play, safety, and culture. From whimsical birthdays to campus takeovers, our team concept maps every detail so you can stay present in the magic.
+              </p>
+              <div class="mt-8 grid gap-4 sm:grid-cols-2">
+                <div class="rounded-2xl border border-cocoa/10 bg-white/80 p-6">
+                  <h3 class="text-lg font-semibold text-cocoa">Our Mission</h3>
+                  <p class="mt-2 text-sm text-cocoa/70">
+                    To bring joy and wonder to every child's milestone through personalized, inclusive experiences that delight families.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-cocoa/10 bg-white/80 p-6">
+                  <h3 class="text-lg font-semibold text-cocoa">Our Vision</h3>
+                  <p class="mt-2 text-sm text-cocoa/70">
+                    To be Guyana's most trusted celebration partners, known for imaginative design and seamless execution.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="grid flex-1 gap-6 sm:grid-cols-2">
+              <div class="rounded-3xl bg-primary/10 p-6">
+                <span class="material-symbols-outlined text-4xl text-primary">groups</span>
+                <h4 class="mt-4 text-lg font-bold text-cocoa">Collaboration</h4>
+                <p class="mt-2 text-sm text-cocoa/70">We co-create every celebration, aligning your story with thoughtful design boards and vendor partners.</p>
+              </div>
+              <div class="rounded-3xl bg-primary/10 p-6">
+                <span class="material-symbols-outlined text-4xl text-primary">favorite</span>
+                <h4 class="mt-4 text-lg font-bold text-cocoa">Passion</h4>
+                <p class="mt-2 text-sm text-cocoa/70">Our crew lives for high-fives, sparkle, and the wide-eyed wonder of kids seeing their dream party.</p>
+              </div>
+              <div class="rounded-3xl bg-primary/10 p-6">
+                <span class="material-symbols-outlined text-4xl text-primary">auto_awesome</span>
+                <h4 class="mt-4 text-lg font-bold text-cocoa">Innovation</h4>
+                <p class="mt-2 text-sm text-cocoa/70">We prototype new themes, interactive labs, and hybrid experiences for every celebration.</p>
+              </div>
+              <div class="rounded-3xl bg-primary/10 p-6">
+                <span class="material-symbols-outlined text-4xl text-primary">shield</span>
+                <h4 class="mt-4 text-lg font-bold text-cocoa">Safety</h4>
+                <p class="mt-2 text-sm text-cocoa/70">Background-checked staff, first-aid training, and sensory zones keep every guest comfortable.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="services" class="bg-primary/5 py-20 sm:py-24">
+          <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+              <p class="text-sm font-bold uppercase tracking-[0.3em] text-primary">Our Services</p>
+              <h2 class="mt-4 text-3xl font-extrabold text-cocoa sm:text-4xl">Choose a celebration path—or design your own.</h2>
+              <p class="mt-4 text-lg text-cocoa/70">
+                We build layered, immersive experiences that balance kid-approved entertainment with parent-approved organization.
+              </p>
+            </div>
+            <div class="mt-12 grid gap-8 lg:grid-cols-3">
+              <article class="flex h-full flex-col rounded-3xl border border-primary/10 bg-white p-8 shadow-lg shadow-primary/10 transition hover:-translate-y-1">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-2xl font-bold text-cocoa">Signature Birthdays</h3>
+                  <span class="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">From $299</span>
+                </div>
+                <p class="mt-4 text-sm text-cocoa/70">
+                  Superhero academies, fairy-tea picnics, cosmic gaming lounges, or anything your child imagines—all curated start to finish.
+                </p>
+                <ul class="mt-6 space-y-2 text-sm text-cocoa/75">
+                  <li>✔ Character hosts &amp; play captains</li>
+                  <li>✔ Creative staging &amp; balloon couture</li>
+                  <li>✔ Dessert art bars &amp; themed menus</li>
+                </ul>
+                <a href="#contact" class="mt-8 inline-flex items-center text-sm font-semibold text-primary hover:text-secondary">Plan a birthday →</a>
+              </article>
+              <article class="flex h-full flex-col rounded-3xl border border-primary/10 bg-white p-8 shadow-lg shadow-primary/10 transition hover:-translate-y-1">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-2xl font-bold text-cocoa">School &amp; Campus Events</h3>
+                  <span class="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">From $499</span>
+                </div>
+                <p class="mt-4 text-sm text-cocoa/70">
+                  Sports days, literacy fairs, graduations, and spirit weeks with logistics, safety marshals, and vendor management handled.
+                </p>
+                <ul class="mt-6 space-y-2 text-sm text-cocoa/75">
+                  <li>✔ Stage design &amp; AV production</li>
+                  <li>✔ Experience zones &amp; competitions</li>
+                  <li>✔ Staffed welcome &amp; dismissal flows</li>
+                </ul>
+                <a href="#contact" class="mt-8 inline-flex items-center text-sm font-semibold text-primary hover:text-secondary">Book a campus day →</a>
+              </article>
+              <article class="flex h-full flex-col rounded-3xl border border-primary/10 bg-white p-8 shadow-lg shadow-primary/10 transition hover:-translate-y-1">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-2xl font-bold text-cocoa">Family &amp; Corporate</h3>
+                  <span class="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">From $399</span>
+                </div>
+                <p class="mt-4 text-sm text-cocoa/70">
+                  Holiday soirées, brand activations, and family fun days that fuse meaningful hospitality with vibrant play for every guest.
+                </p>
+                <ul class="mt-6 space-y-2 text-sm text-cocoa/75">
+                  <li>✔ Concierge timeline &amp; vendor orchestration</li>
+                  <li>✔ Interactive installations &amp; workshops</li>
+                  <li>✔ Inclusive menus &amp; comfort amenities</li>
+                </ul>
+                <a href="#contact" class="mt-8 inline-flex items-center text-sm font-semibold text-primary hover:text-secondary">Design your event →</a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="gallery" class="py-20 sm:py-24">
+          <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+              <p class="text-sm font-bold uppercase tracking-[0.3em] text-primary">Gallery</p>
+              <h2 class="mt-4 text-3xl font-extrabold text-cocoa sm:text-4xl">Peek inside our favorite celebrations.</h2>
+              <p class="mt-4 text-lg text-cocoa/70">Every celebration blends bold visuals with heartfelt storytelling. Explore the energy.</p>
+            </div>
+            <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <figure class="group overflow-hidden rounded-3xl bg-white shadow-lg shadow-primary/10">
+                <div class="aspect-[4/3] w-full bg-cover bg-center transition duration-500 group-hover:scale-105" style="background-image: url('https://renaissancebanquet.com/wp-content/uploads/2023/06/renaissance-banquet-hall-grand-ballroom-new-amenities.jpg');"></div>
+                <figcaption class="p-4 text-sm font-semibold text-cocoa">Crystal ballroom wedding • 280 guests</figcaption>
+              </figure>
+              <figure class="group overflow-hidden rounded-3xl bg-white shadow-lg shadow-primary/10">
+                <div class="aspect-[4/3] w-full bg-cover bg-center transition duration-500 group-hover:scale-105" style="background-image: url('https://www.creativeeventidea.com/uploads/2/6/4/4/2644640/los-angeles-olympic-field-day-for-kids-soccer.jpg');"></div>
+                <figcaption class="p-4 text-sm font-semibold text-cocoa">Outdoor carnival field day</figcaption>
+              </figure>
+              <figure class="group overflow-hidden rounded-3xl bg-white shadow-lg shadow-primary/10">
+                <div class="aspect-[4/3] w-full bg-cover bg-center transition duration-500 group-hover:scale-105" style="background-image: url('https://i0.wp.com/www.partylikeacherry.com/wp-content/uploads/2024/04/neon-party-room-logo.jpg?ssl=1');"></div>
+                <figcaption class="p-4 text-sm font-semibold text-cocoa">Sensory-friendly glow party</figcaption>
+              </figure>
+              <figure class="group overflow-hidden rounded-3xl bg-white shadow-lg shadow-primary/10">
+                <div class="aspect-[4/3] w-full bg-cover bg-center transition duration-500 group-hover:scale-105" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-epzfxTolhAzfd4sNc3iDQIgHw_W6DMqaQA&s');"></div>
+                <figcaption class="p-4 text-sm font-semibold text-cocoa">STEM quest birthday mission</figcaption>
+              </figure>
+              <figure class="group overflow-hidden rounded-3xl bg-white shadow-lg shadow-primary/10">
+                <div class="aspect-[4/3] w-full bg-cover bg-center transition duration-500 group-hover:scale-105" style="background-image: url('https://www.dynamicevents.ie/static/9adf25db13f7ebab649212e11e5eb8dd/9a51e/family_fun_day2.jpg');"></div>
+                <figcaption class="p-4 text-sm font-semibold text-cocoa">Corporate family fun day</figcaption>
+              </figure>
+              <figure class="group overflow-hidden rounded-3xl bg-white shadow-lg shadow-primary/10">
+                <div class="aspect-[4/3] w-full bg-cover bg-center transition duration-500 group-hover:scale-105" style="background-image: url('https://cdn.taggbox.com/v7/https://socialwalls.com/blog/wp-content/uploads/2024/04/gold-glitter-lights-celebrate-award-party-scene-scaled.jpg');"></div>
+                <figcaption class="p-4 text-sm font-semibold text-cocoa">Graduation &amp; awards showcase</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section id="story" class="bg-primary/5 py-20 sm:py-24">
+          <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+              <p class="text-sm font-bold uppercase tracking-[0.3em] text-primary">Our Story</p>
+              <h2 class="mt-4 text-3xl font-extrabold text-cocoa sm:text-4xl">Milestones that shaped Kids Fest Collective.</h2>
+            </div>
+            <div class="mt-12 relative">
+              <div class="absolute left-1/2 -ml-0.5 h-full w-1 bg-primary/20"></div>
+              <div class="relative space-y-12">
+                <div class="flex flex-col items-start sm:flex-row sm:items-center">
+                  <div class="w-full sm:w-1/2 sm:pr-8 sm:text-right">
+                    <p class="text-lg font-bold text-cocoa">2015</p>
+                    <p class="mt-2 text-sm text-cocoa/70">We launched Kids Fest to transform children's parties into immersive, hassle-free experiences for busy families.</p>
+                  </div>
+                  <span class="absolute left-1/2 -ml-2 h-4 w-4 rounded-full bg-primary"></span>
+                  <div class="hidden w-1/2 sm:block"></div>
+                </div>
+                <div class="flex flex-col items-start sm:flex-row sm:items-center">
+                  <div class="hidden w-1/2 sm:block"></div>
+                  <span class="absolute left-1/2 -ml-2 h-4 w-4 rounded-full bg-primary"></span>
+                  <div class="w-full sm:w-1/2 sm:pl-8">
+                    <p class="text-lg font-bold text-cocoa">2018</p>
+                    <p class="mt-2 text-sm text-cocoa/70">Expanded into school partnerships, themed festivals, and bespoke corporate family events.</p>
+                  </div>
+                </div>
+                <div class="flex flex-col items-start sm:flex-row sm:items-center">
+                  <div class="w-full sm:w-1/2 sm:pr-8 sm:text-right">
+                    <p class="text-lg font-bold text-cocoa">2020</p>
+                    <p class="mt-2 text-sm text-cocoa/70">Celebrated our 500th event and introduced sensory-inclusive celebration kits for hybrid gatherings.</p>
+                  </div>
+                  <span class="absolute left-1/2 -ml-2 h-4 w-4 rounded-full bg-primary"></span>
+                  <div class="hidden w-1/2 sm:block"></div>
+                </div>
+                <div class="flex flex-col items-start sm:flex-row sm:items-center">
+                  <div class="hidden w-1/2 sm:block"></div>
+                  <span class="absolute left-1/2 -ml-2 h-4 w-4 rounded-full bg-primary"></span>
+                  <div class="w-full sm:w-1/2 sm:pl-8">
+                    <p class="text-lg font-bold text-cocoa">Today</p>
+                    <p class="mt-2 text-sm text-cocoa/70">We continue to innovate with creative labs, eco-friendly builds, and multilingual play captains across Guyana.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="testimonials" class="py-20 sm:py-24">
+          <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+              <p class="text-sm font-bold uppercase tracking-[0.3em] text-primary">Testimonials</p>
+              <h2 class="mt-4 text-3xl font-extrabold text-cocoa sm:text-4xl">Families and partners share the magic.</h2>
+            </div>
+            <div class="mt-12 grid gap-8 lg:grid-cols-3">
+              <article class="flex h-full flex-col rounded-3xl border border-primary/10 bg-white p-6 shadow-lg shadow-primary/15">
+                <div class="flex items-center gap-4">
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Parent headshot" class="h-12 w-12 rounded-full object-cover" />
+                  <div>
+                    <p class="font-semibold text-cocoa">Sarah M.</p>
+                    <p class="text-xs uppercase tracking-[0.2em] text-cocoa/60">May 2023</p>
+                  </div>
+                </div>
+                <div class="mt-4 flex text-primary">
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                </div>
+                <p class="mt-4 text-sm text-cocoa/80">
+                  “Kids Fest Collective planned our daughter’s mermaid lagoon party and it was a dream—from the sensory play zones to the character parade.”
+                </p>
+              </article>
+              <article class="flex h-full flex-col rounded-3xl border border-primary/10 bg-white p-6 shadow-lg shadow-primary/15">
+                <div class="flex items-center gap-4">
+                  <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80" alt="Parent headshot" class="h-12 w-12 rounded-full object-cover" />
+                  <div>
+                    <p class="font-semibold text-cocoa">David L.</p>
+                    <p class="text-xs uppercase tracking-[0.2em] text-cocoa/60">June 2023</p>
+                  </div>
+                </div>
+                <div class="mt-4 flex text-primary">
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star_half</span>
+                </div>
+                <p class="mt-4 text-sm text-cocoa/80">
+                  “Our school carnival ran flawlessly. The Kids Fest team managed 650 students with calm energy, smart logistics, and contagious enthusiasm.”
+                </p>
+              </article>
+              <article class="flex h-full flex-col rounded-3xl border border-primary/10 bg-white p-6 shadow-lg shadow-primary/15">
+                <div class="flex items-center gap-4">
+                  <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=120&q=80" alt="Parent headshot" class="h-12 w-12 rounded-full object-cover" />
+                  <div>
+                    <p class="font-semibold text-cocoa">Emily R.</p>
+                    <p class="text-xs uppercase tracking-[0.2em] text-cocoa/60">July 2023</p>
+                  </div>
+                </div>
+                <div class="mt-4 flex text-primary">
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                </div>
+                <p class="mt-4 text-sm text-cocoa/80">
+                  “We trusted Kids Fest with our corporate family retreat. They delivered a high-touch experience that wowed the board and delighted the kids.”
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="bg-primary/90 py-20 text-white sm:py-24">
+          <div class="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[1fr,1fr] lg:items-center lg:px-8">
+            <div class="space-y-6">
+              <span class="inline-flex items-center rounded-full bg-white/15 px-4 py-1 text-xs font-bold uppercase tracking-[0.3em]">Let's plan</span>
+              <h2 class="text-3xl font-extrabold sm:text-4xl">Share your celebration vision.</h2>
+              <p class="text-base text-white/80">
+                Tell us about your event and our planners will respond within 24 hours with availability, concept ideas, and investment options.
+              </p>
+              <div class="space-y-4 text-sm text-white/80">
+                <p class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-xl">call</span>
+                  <span>
+                    Phone<br />
+                    <a href="tel:+5925557890" class="font-semibold text-white hover:text-secondary">+592 555 7890</a>
+                  </span>
+                </p>
+                <p class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-xl">mail</span>
+                  <span>
+                    Email<br />
+                    <a href="mailto:hello@kidsfestcollective.com" class="font-semibold text-white hover:text-secondary">hello@kidsfestcollective.com</a>
+                  </span>
+                </p>
+                <p class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-xl">location_on</span>
+                  <span>45 Celebration Lane, Georgetown, Guyana</span>
+                </p>
+              </div>
+            </div>
+            <form class="space-y-4 rounded-3xl bg-white p-8 text-cocoa shadow-2xl shadow-primary/20">
+              <div class="grid gap-4 sm:grid-cols-2">
+                <label class="text-sm font-semibold">
+                  Name
+                  <input type="text" class="mt-2 w-full rounded-xl border border-cocoa/10 bg-background-light px-4 py-3 focus:border-primary focus:ring-primary" placeholder="Full name" />
+                </label>
+                <label class="text-sm font-semibold">
+                  Phone
+                  <input type="tel" class="mt-2 w-full rounded-xl border border-cocoa/10 bg-background-light px-4 py-3 focus:border-primary focus:ring-primary" placeholder="+592 ..." />
+                </label>
+              </div>
+              <label class="text-sm font-semibold">
+                Email
+                <input type="email" class="mt-2 w-full rounded-xl border border-cocoa/10 bg-background-light px-4 py-3 focus:border-primary focus:ring-primary" placeholder="you@email.com" />
+              </label>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <label class="text-sm font-semibold">
+                  Event type
+                  <select class="mt-2 w-full rounded-xl border border-cocoa/10 bg-background-light px-4 py-3 focus:border-primary focus:ring-primary">
+                    <option>Birthday celebration</option>
+                    <option>School or campus event</option>
+                    <option>Corporate / brand</option>
+                    <option>Family milestone</option>
+                    <option>Custom experience</option>
+                  </select>
+                </label>
+                <label class="text-sm font-semibold">
+                  Budget (G$)
+                  <input type="text" class="mt-2 w-full rounded-xl border border-cocoa/10 bg-background-light px-4 py-3 focus:border-primary focus:ring-primary" placeholder="e.g., 200,000 - 450,000" />
+                </label>
+              </div>
+              <label class="text-sm font-semibold">
+                How can we help?
+                <textarea rows="4" class="mt-2 w-full rounded-xl border border-cocoa/10 bg-background-light px-4 py-3 focus:border-primary focus:ring-primary" placeholder="Share themes, guest count, or special requests."></textarea>
+              </label>
+              <button type="submit" class="w-full rounded-full bg-primary px-6 py-3 text-sm font-bold uppercase tracking-[0.3em] text-white shadow-glow transition hover:-translate-y-1 hover:bg-secondary">
+                Submit Inquiry
+              </button>
+            </form>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="bg-background-dark text-white">
+        <div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+          <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-white/70">
+            <a href="#top" class="transition hover:text-primary">Home</a>
+            <a href="#services" class="transition hover:text-primary">Services</a>
+            <a href="#gallery" class="transition hover:text-primary">Gallery</a>
+            <a href="#testimonials" class="transition hover:text-primary">Testimonials</a>
+            <a href="#contact" class="transition hover:text-primary">Contact</a>
+          </nav>
+          <p class="text-xs uppercase tracking-[0.3em] text-white/50">© <span id="year"></span> Kids Fest Collective. Crafted with joy.</p>
+        </div>
+      </footer>
+
+      <!-- <a href="#contact" class="fixed bottom-6 right-6 inline-flex items-center gap-3 rounded-full bg-primary px-5 py-3 text-sm font-bold uppercase tracking-[0.3em] text-white shadow-glow transition hover:-translate-y-1 hover:bg-secondary">
+        🎉 Plan My Event
+      </a> -->
+    </div>
+
+    <script>
+      const menuButton = document.getElementById("menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (menuButton && mobileMenu) {
+        mobileMenu.style.display = "none";
+        menuButton.addEventListener("click", () => {
+          const isHidden = mobileMenu.style.display === "none";
+          mobileMenu.style.display = isHidden ? "block" : "none";
+          menuButton.querySelector(".material-symbols-outlined").textContent = isHidden ? "close" : "menu";
+        });
+      }
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
