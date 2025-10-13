@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>FreshTaste | Premium Coconut Water Partnerships</title>
+  <!--
+      This page showcases a modern, image‑focused design for FreshTaste, a premium coconut
+      water brand. It leans heavily on high‑quality photography to convey freshness, purity
+      and sophistication. Tailwind CSS powers the layout and typography, while a small
+      vanilla JavaScript function handles the hero carousel. Feel free to swap images for
+      locally hosted assets as needed; the current sources are pulled from public URLs
+      provided by the client.
+    -->
+  <meta name="description"
+    content="FreshTaste partners with global brands to deliver premium coconut water experiences. Discover innovations, sourcing excellence, and end‑to‑end white‑label solutions." />
+  <link rel="icon" type="image/png" href="./logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=typography,forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: "#197149", soft: "#E6F5EC", dark: "#0B3D2A" },
+            accent: { DEFAULT: "#57C785", soft: "#DDF7E9" },
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+            display: ["Playfair Display", "serif"],
+          },
+          boxShadow: {
+            glow: "0 20px 45px -20px rgba(25, 113, 73, 0.55)",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-white text-slate-900 antialiased">
+  <div class="relative overflow-hidden">
+    <!-- ===== Header ===== -->
+    <!-- ===== Modern Glass Header (drop-in) ===== -->
+    <header class="sticky top-0 z-50">
+      <!-- full-width glass bar -->
+      <nav id="siteNav" class="group w-full bg-white/25 backdrop-blur-xl supports-[backdrop-filter]:bg-white/20
+           transition-all duration-300
+           ring-0 hover:ring-1 ring-black/5
+           shadow-none hover:shadow-[0_18px_45px_-18px_rgba(25,113,73,.35)]
+           hover:bg-white/55
+           hover:-translate-y-[2px]
+           transform-gpu">
+        <!-- content rail (keeps items aligned while bar spans full width) -->
+        <div class="mx-auto max-w-7xl px-4 md:px-8">
+          <div class="flex items-center justify-between py-3 md:py-4">
+            <!-- Bigger wordmark on large screens -->
+            <a href="#" class="flex items-center gap-3">
+              <img id="brandLogo" src="./logo-with-text.png" alt="FreshTaste"
+                class="h-20 sm:h-20 md:h-[72px] lg:h-24 xl:h-[120px] w-auto transition-all duration-300" />
+            </a>
+
+            <!-- Desktop nav -->
+            <ul class="hidden items-center gap-9 text-[0.95rem] font-medium text-slate-800 md:flex">
+              <li><a href="#solutions" class="relative hover:text-brand transition-colors
+                 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-brand
+                 after:transition-all after:duration-300 hover:after:w-full">Solutions</a></li>
+              <li><a href="#sourcing" class="relative hover:text-brand transition-colors
+                 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-brand
+                 after:transition-all after:duration-300 hover:after:w-full">Sourcing</a></li>
+              <li><a href="#partners" class="relative hover:text-brand transition-colors
+                 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-brand
+                 after:transition-all after:duration-300 hover:after:w-full">Partnerships</a></li>
+              <li><a href="#contact" class="relative hover:text-brand transition-colors
+                 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-brand
+                 after:transition-all after:duration-300 hover:after:w-full">Contact</a></li>
+            </ul>
+
+            <!-- CTA + mobile -->
+            <div class="flex items-center gap-2">
+              <a href="#contact"
+                class="hidden rounded-full bg-brand px-6 py-2.5 text-sm font-semibold text-white shadow-glow hover:bg-emerald-700 md:inline-block">
+                Book a Tasting
+              </a>
+              <button id="menuBtn" aria-controls="mobile-nav" aria-expanded="false"
+                class="inline-flex items-center justify-center rounded-xl p-2 text-slate-700 md:hidden">
+                <span class="sr-only">Open menu</span>
+                <svg viewBox="0 0 24 24" class="h-6 w-6">
+                  <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile panel (full-width to match header) -->
+      <div id="mobile-nav" class="hidden bg-white/95 backdrop-blur-xl md:hidden">
+        <div class="mx-auto max-w-7xl px-6 py-4 space-y-3 text-slate-800">
+          <a href="#solutions" class="block">Solutions</a>
+          <a href="#sourcing" class="block">Sourcing</a>
+          <a href="#partners" class="block">Partnerships</a>
+          <a href="#contact" class="block">Contact</a>
+          <a href="#contact"
+            class="mt-2 inline-block rounded-full bg-brand px-5 py-2 text-sm font-semibold text-white">Book a
+            Tasting</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== Hero Section ===== -->
+    <section id="hero" class="relative bg-gradient-to-b from-brand-soft/40 to-white">
+      <div class="mx-auto max-w-7xl px-6 pt-6 md:pt-10 pb-12 md:px-8">
+        <div class="relative overflow-hidden rounded-3xl shadow-2xl" data-hero>
+          <div class="relative h-[72vh] min-h-[520px] md:h-[78vh]">
+            <!-- Slide 1 -->
+            <article class="hero-slide absolute inset-0 opacity-100" data-index="0" aria-hidden="false">
+              <img
+                src="https://res.cloudinary.com/peloton-cycle/image/fetch/f_auto,c_limit,w_3840,q_90/https://images.ctfassets.net/6ilvqec50fal/34IvWHpjsMv8yufOpA8uKK/3bbe4e5cf526caf9d8acdf184a635586/health-benefits-of-coconut-water.jpg"
+                alt="Fresh coconuts on a beach with coconut water" class="h-full w-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-r from-brand-dark/70 via-brand-dark/40 to-transparent"></div>
+              <div class="absolute inset-0 flex items-end md:items-center">
+                <div class="px-6 pb-8 md:px-12 md:pb-0">
+                  <div class="max-w-xl text-white space-y-4">
+                    <span
+                      class="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold tracking-[0.18em]">
+                      <span class="h-2 w-2 rounded-full bg-accent"></span>
+                      Naturally Pure
+                    </span>
+                    <h1 class="font-display text-4xl md:text-6xl leading-tight">
+                      Experience nature in every sip.
+                    </h1>
+                    <p class="hidden md:block text-white/85">
+                      Our coconuts are harvested at peak freshness for unmatched flavour and hydration.
+                    </p>
+                    <div class="flex flex-wrap gap-3 pt-1">
+                      <a href="#contact"
+                        class="rounded-full bg-accent px-6 py-3 font-semibold text-brand-dark hover:bg-white">
+                        Book a Tasting
+                      </a>
+                      <a href="#solutions"
+                        class="hidden sm:inline-flex rounded-full border border-white/50 px-6 py-3 font-semibold text-white hover:bg-white/10">
+                        Explore
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <!-- Slide 2 -->
+            <article class="hero-slide absolute inset-0 opacity-0 pointer-events-none" data-index="1"
+              aria-hidden="true">
+              <img
+                src="https://assets.clevelandclinic.org/transform/LargeFeatureImage/7ae3470c-6ca1-4064-81c8-7117c5fff9d3/CoconutWater-637330250-770x533-1_jpg"
+                alt="Clear coconut water being poured over ice" class="h-full w-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-l from-brand-dark/65 via-brand-dark/45 to-transparent"></div>
+              <div class="absolute inset-0 flex items-end md:items-center">
+                <div class="px-6 pb-8 md:px-12 md:pb-0">
+                  <div class="max-w-xl text-white space-y-4">
+                    <span
+                      class="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold tracking-[0.18em]">
+                      <span class="h-2 w-2 rounded-full bg-accent"></span>
+                      Cold‑Pressed Clarity
+                    </span>
+                    <h2 class="font-display text-4xl md:text-6xl leading-tight">
+                      Crystal clear, utterly refreshing.
+                    </h2>
+                    <p class="hidden md:block text-white/85">
+                      Clean labels. Elevated flavour profiles. The perfect pour for champions.
+                    </p>
+                    <div class="flex flex-wrap gap-3 pt-1">
+                      <a href="#partners"
+                        class="rounded-full bg-white px-6 py-3 font-semibold text-brand hover:bg-accent hover:text-white">
+                        See the Journey
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <!-- Slide 3 -->
+            <article class="hero-slide absolute inset-0 opacity-0 pointer-events-none" data-index="2"
+              aria-hidden="true">
+              <img src="https://www.hkvitals.com/blog/wp-content/uploads/2025/05/tender-coconut-water-benefits.jpg"
+                alt="Tender coconuts and water on a rustic table" class="h-full w-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-r from-brand-dark/70 via-brand-dark/40 to-transparent"></div>
+              <div class="absolute inset-0 flex items-end md:items-center">
+                <div class="px-6 pb-8 md:px-12 md:pb-0">
+                  <div class="max-w-xl text-white space-y-4">
+                    <span
+                      class="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold tracking-[0.18em]">
+                      <span class="h-2 w-2 rounded-full bg-accent"></span>
+                      Regenerative Roots
+                    </span>
+                    <h2 class="font-display text-4xl md:text-6xl leading-tight">
+                      Sourced from lush groves.
+                    </h2>
+                    <p class="hidden md:block text-white/85">
+                      Our farms nurture coconuts in harmony with nature—fully traceable and ethical.
+                    </p>
+                    <div class="flex flex-wrap gap-3 pt-1">
+                      <a href="#sourcing"
+                        class="rounded-full bg-accent px-6 py-3 font-semibold text-brand-dark hover:bg-white hover:text-brand">
+                        Explore Sourcing
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- Vignette & Controls -->
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/20">
+          </div>
+          <div id="dots" class="absolute bottom-5 left-1/2 z-20 -translate-x-1/2 flex items-center gap-2" role="tablist"
+            aria-label="Hero slides"></div>
+          <div class="absolute bottom-5 right-5 z-20 flex items-center gap-3">
+            <button type="button"
+              class="hero-prev inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur hover:bg-white/30"
+              aria-label="Previous slide">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button type="button"
+              class="hero-next inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur hover:bg-white/30"
+              aria-label="Next slide">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Image Showcase Section ===== -->
+    <section class="py-20 bg-white">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="flex flex-col items-center text-center mb-14">
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-brand/70">Visual Showcase</span>
+          <h2 class="mt-4 font-display text-3xl md:text-4xl text-brand-dark max-w-3xl">
+            A glimpse into our world of coconut water
+          </h2>
+          <p class="mt-4 max-w-xl text-sm text-slate-600">
+            From tropical groves to artisan bottling, these images tell the story of
+            purity, innovation and craftsmanship that make FreshTaste unique.
+          </p>
+        </div>
+        <!-- Image grid -->
+        <div class="grid gap-6 md:gap-8 lg:grid-cols-3 sm:grid-cols-2">
+          <figure class="relative overflow-hidden rounded-2xl shadow-lg">
+            <img src="https://korshots.com/cdn/shop/articles/coconut_water_cover.jpg?v=1597335266"
+              alt="Refreshing glass of coconut water with limes"
+              class="w-full h-72 object-cover object-center transition-transform duration-700 ease-in-out hover:scale-105" />
+            <figcaption
+              class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-black/20 to-transparent p-4 text-white">
+              <span class="text-sm font-medium">Bottled freshness for every occasion</span>
+            </figcaption>
+          </figure>
+          <figure class="relative overflow-hidden rounded-2xl shadow-lg">
+            <img src="https://kitchenofyouth.com/wp-content/uploads/2018/06/coconut-and-water-pic.jpg"
+              alt="Split coconuts and poured coconut water"
+              class="w-full h-72 object-cover object-center transition-transform duration-700 ease-in-out hover:scale-105" />
+            <figcaption
+              class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-black/20 to-transparent p-4 text-white">
+              <span class="text-sm font-medium">Nature’s bounty, bottled with care</span>
+            </figcaption>
+          </figure>
+          <figure class="relative overflow-hidden rounded-2xl shadow-lg">
+            <img
+              src="https://www.mycocomama.com/cdn/shop/articles/The_Ultimate_Summer_Drink_How_to_Make_the_Perfect_Coconut_Water_Lemonade_1500_x_1000_pxl_4dfff81e-3d21-4fdf-8b5e-fc56f3965183.png?v=1684214188"
+              alt="Coconut water lemonade with lemons"
+              class="w-full h-72 object-cover object-center transition-transform duration-700 ease-in-out hover:scale-105" />
+            <figcaption
+              class="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-black/20 to-transparent p-4 text-white">
+              <span class="text-sm font-medium">Elevate your refreshment with citrus twists</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Main Content Sections ===== -->
+    <main>
+      <!-- Solutions -->
+      <section id="solutions" class="relative overflow-hidden bg-white py-20">
+        <div class="pointer-events-none absolute -top-40 right-1/4 h-96 w-96 rounded-full bg-accent/15 blur-3xl"></div>
+        <div class="pointer-events-none absolute -bottom-32 left-16 h-80 w-80 rounded-full bg-brand/10 blur-3xl"></div>
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="flex flex-wrap items-center justify-between gap-6">
+            <h2 class="max-w-3xl font-display text-3xl text-brand-dark md:text-4xl">
+              Modular coconut water solutions engineered for premium channels.
+            </h2>
+            <p class="max-w-xl text-sm text-slate-600">
+              From ready‑to‑drink for retail to elevated foodservice concepts, each
+              build integrates our advanced hydration science, sustainable packaging,
+              and sensory design lab.
+            </p>
+          </div>
+          <div class="mt-16 grid gap-8 md:grid-cols-3">
+            <!-- Hydration Portfolio -->
+            <article
+              class="group rounded-3xl border border-slate-100 p-8 shadow-sm transition hover:-translate-y-1.5 hover:shadow-xl">
+              <div class="relative flex h-14 w-14 items-center justify-center rounded-2xl
+             bg-gradient-to-br from-emerald-200/70 via-emerald-100 to-white
+             ring-1 ring-inset ring-emerald-900/5 shadow-[0_8px_18px_-8px_rgba(16,185,129,.45)]">
+                <!-- droplet + bottle -->
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="h-8 w-8 text-emerald-700">
+                  <path fill="currentColor"
+                    d="M9.75 4.5c0-.414.336-.75.75-.75h3c.414 0 .75.336.75.75v4.09c0 .2.079.392.22.533l.407.407a3.75 3.75 0 0 1 1.098 2.652v4.308A3 3 0 0 1 13.975 20h-3.95A3 3 0 0 1 7 16.49v-4.308c0-.996.391-1.953 1.098-2.66l.402-.402a.75.75 0 0 0 .22-.533V4.5Z"
+                    opacity=".28" />
+                  <path fill="currentColor"
+                    d="M8.2 13.2c0 1.77 1.43 3.2 3.2 3.2s3.2-1.43 3.2-3.2c0-2.27-3.2-5.9-3.2-5.9s-3.2 3.63-3.2 5.9Z" />
+                </svg>
+                <span
+                  class="pointer-events-none absolute inset-0 rounded-2xl bg-white/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+              </div>
+
+              <h3 class="mt-5 text-xl font-semibold text-brand-dark">Hydration Portfolio</h3>
+              <p class="mt-3 text-sm text-slate-600">
+                Ready-to-drink SKUs, mixers and functional lines created with nutritionists.
+              </p>
+              <ul class="mt-5 space-y-3 text-sm text-slate-500">
+                <li>- Private label RTD bottles & aseptic cartons</li>
+                <li>- Limited-edition flavors co-created with your brand</li>
+                <li>- Shelf-stable and HPP options</li>
+              </ul>
+            </article>
+
+            <!-- Experience Design Lab -->
+            <article
+              class="group rounded-3xl border border-slate-100 p-8 shadow-sm transition hover:-translate-y-1.5 hover:shadow-xl">
+              <div class="relative flex h-14 w-14 items-center justify-center rounded-2xl
+             bg-gradient-to-br from-emerald-200/70 via-emerald-100 to-white
+             ring-1 ring-inset ring-emerald-900/5 shadow-[0_8px_18px_-8px_rgba(16,185,129,.45)]">
+                <!-- beaker + spark -->
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="h-8 w-8 text-emerald-700">
+                  <path fill="currentColor"
+                    d="M9 3h6v2H9zM9 5v3.172L5.586 11.586A2 2 0 0 0 5 13v5a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-5a2 2 0 0 0-.586-1.414L15 8.172V5h-2v4l4.293 4.293A1 1 0 0 1 17.0 14H7a1 1 0 0 1-.707-1.707L10.5 8.086V5H9z"
+                    opacity=".28" />
+                  <path fill="currentColor"
+                    d="M12 12.5c-1.933 0-3.5 1.119-3.5 2.5S10.067 17.5 12 17.5s3.5-1.119 3.5-2.5S13.933 12.5 12 12.5Zm4.25-8.25.5-1.5.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5Z" />
+                </svg>
+                <span
+                  class="pointer-events-none absolute inset-0 rounded-2xl bg-white/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+              </div>
+
+              <h3 class="mt-5 text-xl font-semibold text-brand-dark">Experience Design Lab</h3>
+              <p class="mt-3 text-sm text-slate-600">
+                Immersive innovation workshops with sensory mapping and packaging strategy.
+              </p>
+              <ul class="mt-5 space-y-3 text-sm text-slate-500">
+                <li>- Brand immersion & flavour architecture</li>
+                <li>- 3D packaging visualization</li>
+                <li>- Integrated merchandising toolkits</li>
+              </ul>
+            </article>
+
+            <!-- Scale & Sustainability -->
+            <article
+              class="group rounded-3xl border border-slate-100 p-8 shadow-sm transition hover:-translate-y-1.5 hover:shadow-xl">
+              <div class="relative flex h-14 w-14 items-center justify-center rounded-2xl
+             bg-gradient-to-br from-emerald-200/70 via-emerald-100 to-white
+             ring-1 ring-inset ring-emerald-900/5 shadow-[0_8px_18px_-8px_rgba(16,185,129,.45)]">
+                <!-- leaf + growth arrow -->
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="h-8 w-8 text-emerald-700">
+                  <path fill="currentColor"
+                    d="M12 3c4.418 0 8 3.582 8 8a8 8 0 1 1-16 0c0-1.408.386-2.726 1.056-3.857A9.99 9.99 0 0 1 12 3Z"
+                    opacity=".22" />
+                  <path fill="currentColor"
+                    d="M8.5 13.5c3.5 0 6-3 7.5-6 0 0 .5 5.5-2.5 8.5S8.5 18 8.5 18s-.5-2.5 0-4.5Z" />
+                  <path fill="currentColor" d="M14.5 10.5 17 8v2h2V6h-4v2h2l-2.5 2.5z" />
+                </svg>
+                <span
+                  class="pointer-events-none absolute inset-0 rounded-2xl bg-white/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+              </div>
+
+              <h3 class="mt-5 text-xl font-semibold text-brand-dark">Scale & Sustainability</h3>
+              <p class="mt-3 text-sm text-slate-600">
+                Global logistics, analytics dashboards and circular packaging programs.
+              </p>
+              <ul class="mt-5 space-y-3 text-sm text-slate-500">
+                <li>- IQF, NFC and foodservice bulk formats</li>
+                <li>- Live supply chain transparency tools</li>
+                <li>- Carbon-positive packaging pathways</li>
+              </ul>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Sourcing -->
+      <section id="sourcing" class="bg-brand-soft/60 py-24">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="grid gap-16 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-dark/70">Regenerative
+                Sourcing</span>
+              <h2 class="mt-4 font-display text-3xl text-brand-dark md:text-4xl">
+                Single‑origin coconuts nurtured by coastal microclimates.
+              </h2>
+              <p class="mt-6 text-sm text-slate-700">
+                Every batch is mapped to guarantee transparency, organic
+                certification, and ethical wages.
+              </p>
+              <!-- Additional image inside sourcing text -->
+              <div class="mt-6 hidden sm:block">
+                <img src="https://tasteofrecipes.com/wp-content/uploads/2023/05/AdobeStock_203678537-scaled.jpeg"
+                  alt="Coconut water drink with straw and lemon" class="w-full rounded-2xl shadow-md" />
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-accent/40 to-brand/10 blur-3xl">
+              </div>
+              <img src="https://kitchenofyouth.com/wp-content/uploads/2018/06/coconut-and-water-pic.jpg"
+                alt="Workers harvesting coconuts in a lush grove" class="w-full rounded-3xl object-cover shadow-2xl" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partners -->
+      <section id="partners" class="bg-white py-24">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-[0.2em] text-brand/70">Partner Journey</span>
+              <h2 class="mt-4 font-display text-3xl text-brand-dark md:text-4xl">
+                A tailored pathway from concept to global rollout.
+              </h2>
+            </div>
+            <a href="#contact"
+              class="inline-flex items-center gap-2 text-sm font-semibold text-brand transition hover:text-brand-dark">
+              Connect with partnership lead
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+          <div class="mt-14 grid gap-8 lg:grid-cols-4">
+            <div class="rounded-3xl border border-slate-100 p-8">
+              <span class="text-xs font-semibold uppercase tracking-[0.3em] text-brand">01</span>
+              <h3 class="mt-4 text-lg font-semibold text-brand-dark">
+                Immersion
+              </h3>
+              <p class="mt-3 text-sm text-slate-600">
+                Brand deep dive, sensory benchmarking and market mapping.
+              </p>
+            </div>
+            <div class="rounded-3xl border border-slate-100 p-8">
+              <span class="text-xs font-semibold uppercase tracking-[0.3em] text-brand">02</span>
+              <h3 class="mt-4 text-lg font-semibold text-brand-dark">
+                Co‑Creation
+              </h3>
+              <p class="mt-3 text-sm text-slate-600">
+                Laboratory tastings, ingredient innovation and renderings.
+              </p>
+            </div>
+            <div class="rounded-3xl border border-slate-100 p-8">
+              <span class="text-xs font-semibold uppercase tracking-[0.3em] text-brand">03</span>
+              <h3 class="mt-4 text-lg font-semibold text-brand-dark">
+                Operational Build
+              </h3>
+              <p class="mt-3 text-sm text-slate-600">
+                Production scheduling and QA protocol design.
+              </p>
+            </div>
+            <div class="rounded-3xl border border-slate-100 p-8">
+              <span class="text-xs font-semibold uppercase tracking-[0.3em] text-brand">04</span>
+              <h3 class="mt-4 text-lg font-semibold text-brand-dark">
+                Launch & Elevate
+              </h3>
+              <p class="mt-3 text-sm text-slate-600">
+                Dashboards, tastings and innovation sprints.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Impact -->
+      <section class="bg-brand-dark py-24">
+        <div class="mx-auto max-w-7xl px-6 text-white">
+          <div class="grid gap-14 lg:grid-cols-[1.1fr_1fr]">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-[0.2em] text-white/60">Impact Reporting</span>
+              <h2 class="mt-4 font-display text-3xl md:text-4xl">
+                Every liter captured in a living dashboard.
+              </h2>
+              <p class="mt-5 text-sm text-white/80">
+                Traceability certificates, carbon accounting and flavour integrity labs for every SKU.
+              </p>
+              <div class="mt-10 grid gap-6 sm:grid-cols-2">
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                  <p class="text-3xl font-semibold text-accent">99.3%</p>
+                  <p class="mt-2 text-xs uppercase tracking-[0.2em] text-white/60">
+                    On‑time shipping
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                  <p class="text-3xl font-semibold text-accent">62%</p>
+                  <p class="mt-2 text-xs uppercase tracking-[0.2em] text-white/60">
+                    Plastic reduction
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="space-y-6">
+              <figure class="rounded-3xl bg-white p-8 text-brand-dark shadow-lg">
+                <blockquote class="text-sm leading-relaxed text-slate-700">
+                  "FreshTaste helped us reimagine hydration for our hotel lounges."
+                </blockquote>
+                <figcaption class="mt-6 text-sm font-semibold">
+                  Skylar Chen | Meridian Collective Hotels
+                </figcaption>
+              </figure>
+              <figure class="rounded-3xl border border-white/15 bg-white/5 p-8">
+                <blockquote class="text-sm text-white/80">
+                  "Data fidelity, operational precision—the standard for co‑created beverages."
+                </blockquote>
+                <figcaption class="mt-6 text-sm font-semibold text-white">
+                  Arjun Patel | VitaLab Wellness
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Thought Leadership -->
+      <section class="bg-white py-24">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-[0.2em] text-brand/70">Thought Leadership</span>
+              <h2 class="mt-4 font-display text-3xl text-brand-dark md:text-4xl">
+                Insights to amplify your coconut water narrative.
+              </h2>
+              <p class="mt-6 text-sm text-slate-600">
+                Proprietary consumer research, sensory trend reports and
+                sustainability playbooks.
+              </p>
+            </div>
+            <div class="grid gap-6 sm:grid-cols-2">
+              <article class="rounded-3xl border border-slate-100 p-6">
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand/70">
+                  Report
+                </p>
+                <h3 class="mt-3 text-base font-semibold text-brand-dark">
+                  2026 Global Hydration Market Forecast
+                </h3>
+                <p class="mt-2 text-sm text-slate-600">
+                  Decode premium hydration behaviour across hospitality, wellness and travel.
+                </p>
+                <a href="#"
+                  class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-brand transition hover:text-brand-dark">
+                  Request executive summary
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </article>
+              <article class="rounded-3xl border border-slate-100 p-6">
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand/70">
+                  Playbook
+                </p>
+                <h3 class="mt-3 text-base font-semibold text-brand-dark">
+                  Sustainable Packaging Accelerator
+                </h3>
+                <p class="mt-2 text-sm text-slate-600">
+                  Achieve circularity targets with materials, storytelling and KPI templates.
+                </p>
+                <a href="#"
+                  class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-brand transition hover:text-brand-dark">
+                  Join the pilot cohort
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="relative overflow-hidden bg-brand-soft py-24">
+        <div class="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-accent/40 blur-3xl"></div>
+        <div class="absolute -left-32 bottom-0 h-80 w-80 rounded-full bg-brand/20 blur-3xl"></div>
+        <div class="relative mx-auto max-w-5xl rounded-3xl bg-white p-10 shadow-2xl lg:p-16">
+          <div class="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+            <div>
+              <img src="./logo-with-text.png" alt="FreshTaste logo" class="h-32 w-auto" />
+              <h2 class="mt-6 font-display text-3xl text-brand-dark">
+                Let's craft the next signature coconut water experience.
+              </h2>
+              <p class="mt-4 text-sm text-slate-600">
+                Our partnership architects will align within 48 hours.
+              </p>
+            </div>
+            <form class="grid gap-5" action="#" method="POST">
+              <div class="grid gap-5 sm:grid-cols-2">
+                <label class="text-sm font-medium text-brand-dark">Full Name
+                  <input type="text" name="name" required
+                    class="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20"
+                    placeholder="Jordan Rivera" />
+                </label>
+                <label class="text-sm font-medium text-brand-dark">Company
+                  <input type="text" name="company" required
+                    class="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20"
+                    placeholder="Meridian Collective" />
+                </label>
+              </div>
+              <div class="grid gap-5 sm:grid-cols-2">
+                <label class="text-sm font-medium text-brand-dark">Email
+                  <input type="email" name="email" required
+                    class="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20"
+                    placeholder="you@brand.com" />
+                </label>
+                <label class="text-sm font-medium text-brand-dark">Website
+                  <input type="url" name="website"
+                    class="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20"
+                    placeholder="https://" />
+                </label>
+              </div>
+              <label class="text-sm font-medium text-brand-dark">Project Vision
+                <textarea name="message" rows="4"
+                  class="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20"
+                  placeholder="Audience, formats and launch timing."></textarea>
+              </label>
+              <label class="inline-flex items-center gap-3 text-xs text-slate-500">
+                <input type="checkbox" required
+                  class="h-4 w-4 rounded border-slate-300 text-brand focus:ring-brand/30" />
+                I consent to receive partnership updates and insights from
+                FreshTaste.
+              </label>
+              <button type="submit"
+                class="inline-flex items-center justify-center rounded-full bg-brand px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-brand/30 transition hover:bg-brand-dark">
+                Submit Partnership Brief
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="border-t border-slate-200 bg-white">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-12 md:flex-row md:items-center md:justify-between">
+        <div class="flex items-center gap-4">
+          <img src="./logo.png" alt="FreshTaste icon" class="h-10 w-10" />
+          <p class="text-sm text-slate-600">
+            FreshTaste | Premium Coconut Water Partnerships
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-6 text-xs text-slate-500">
+          <a href="#solutions" class="hover:text-brand">Solutions</a>
+          <a href="#sourcing" class="hover:text-brand">Sourcing</a>
+          <a href="#partners" class="hover:text-brand">Partnerships</a>
+          <a href="#contact" class="hover:text-brand">Contact</a>
+          <span>
+            (c) <span id="year"></span> FreshTaste. All rights
+            reserved.
+          </span>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- ===== JS for menu & hero slider ===== -->
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileNav = document.getElementById("mobile-nav");
+    menuBtn?.addEventListener("click", () => {
+      const open = mobileNav.classList.toggle("hidden") === false;
+      menuBtn.setAttribute("aria-expanded", String(open));
+    });
+
+    // Hero slider
+    const root = document.querySelector("[data-hero]");
+    if (root) {
+      const slides = [...root.querySelectorAll(".hero-slide")];
+      const btnPrev = root.querySelector(".hero-prev");
+      const btnNext = root.querySelector(".hero-next");
+      const dotsWrap = document.getElementById("dots");
+      let i = 0;
+      let timer;
+      function go(n) {
+        i = (n + slides.length) % slides.length;
+        slides.forEach((s, idx) => {
+          const active = idx === i;
+          s.style.opacity = active ? 1 : 0;
+          s.style.pointerEvents = active ? "auto" : "none";
+          s.setAttribute("aria-hidden", String(!active));
+        });
+        [...dotsWrap.children].forEach((d, idx) => {
+          d.className = `h-2.5 rounded-full transition ${idx === i ? "w-10 bg-white" : "w-6 bg-white/50 hover:bg-white/70"}`;
+          d.setAttribute("aria-selected", String(idx === i));
+        });
+      }
+      slides.forEach((_, idx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.role = "tab";
+        b.ariaLabel = `Go to slide ${idx + 1}`;
+        b.className = "h-2.5 w-6 rounded-full bg-white/50 transition hover:bg-white/70";
+        b.addEventListener("click", () => go(idx));
+        dotsWrap.appendChild(b);
+      });
+      const next = () => go(i + 1);
+      const prev = () => go(i - 1);
+      btnNext?.addEventListener("click", next);
+      btnPrev?.addEventListener("click", prev);
+      function start() {
+        timer = setInterval(next, 6000);
+      }
+      function stop() {
+        clearInterval(timer);
+      }
+      root.addEventListener("mouseenter", stop);
+      root.addEventListener("mouseleave", start);
+      go(0);
+      start();
+    }
+    // Set footer year dynamically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
